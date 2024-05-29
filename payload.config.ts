@@ -174,7 +174,7 @@ export default buildConfig({
   plugins: [
     uploadthingStorage({
       collections: {
-        ['blocks']: true,
+        ['media']: true,
       },
       options: {
         apiKey: process.env.UPLOADTHING_SECRET,

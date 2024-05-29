@@ -13,7 +13,7 @@ export default async function HomePageContent() {
     })
 
     const sectionsData = data.docs[0].SplitSection
-
+    console.log(sectionsData)
     return (
         <section className="px-8 flex flex-col gap-8">
 

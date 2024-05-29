@@ -25,6 +25,8 @@ import { buildConfig } from 'payload/config'
 import sharp from 'sharp'
 import { fileURLToPath } from 'url'
 
+import { uploadthingStorage } from '@payloadcms/storage-uploadthing'
+
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
@@ -60,10 +62,66 @@ export default buildConfig({
     {
       slug: 'media',
       upload: true,
+      fields: [],
+    },
+    {
+      slug: 'section',
       fields: [
         {
-          name: 'text',
-          type: 'text',
+          name: 'SplitSection',
+          type: 'array',
+          fields: [
+            {
+              name: 'title',
+              type: 'text',
+            },
+            {
+              name: 'description',
+              type: 'text',
+            },
+            {
+              name: 'buttonText',
+              type: 'text',
+            },
+            {
+              name: 'image',
+              type: 'upload',
+              relationTo: 'media',
+            },
+            {
+              name: 'backgroundColor',
+              label: 'Background Color',
+              type: 'text',
+            },
+            {
+              name: 'textColor',
+              label: 'Text Color',
+              type: 'radio',
+              options: [
+                {
+                  label: 'White',
+                  value: 'white',
+                },
+                {
+                  label: 'Black',
+                  value: 'black',
+                },
+              ],
+              defaultValue: 'white',
+            },
+            {
+              name: 'buttonFill',
+              label: ' Button Fill',
+              type: 'checkbox',
+              defaultValue: false,
+            },
+            {
+              name: 'invertPosition',
+              label: 'Invert Position',
+              type: 'checkbox',
+              defaultValue: false,
+            },
+          ],
         },
       ],
     },
@@ -112,6 +170,19 @@ export default buildConfig({
       })
     }
   },
+
+  plugins: [
+    uploadthingStorage({
+      collections: {
+        ['blocks']: true,
+      },
+      options: {
+        apiKey: process.env.UPLOADTHING_SECRET,
+        acl: 'public-read',
+      },
+    }),
+  ],
+
   // Sharp is now an optional dependency -
   // if you want to resize images, crop, set focal point, etc.
   // make sure to install it and pass it to the config.

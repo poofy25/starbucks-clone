@@ -11,7 +11,7 @@ export default function SplitSection({ blockData }: { blockData: any }) {
     >
       <Image
         className="h-full w-[50%] object-cover"
-        src={blockData.image.url}
+        src="/api/media/file/137-92091.jpeg"
         alt="img"
         width="400"
         height="400"

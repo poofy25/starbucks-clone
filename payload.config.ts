@@ -30,6 +30,11 @@ import { uploadthingStorage } from '@payloadcms/storage-uploadthing'
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
+// Collections import
+
+import Pages from '@/cms-collections/Pages'
+import Tests from '@/cms-collections/Sections'
+
 export default buildConfig({
   //editor: slateEditor({}),
   editor: lexicalEditor(),
@@ -43,22 +48,8 @@ export default buildConfig({
       },
       fields: [],
     },
-    {
-      slug: 'pages',
-      admin: {
-        useAsTitle: 'title',
-      },
-      fields: [
-        {
-          name: 'title',
-          type: 'text',
-        },
-        {
-          name: 'content',
-          type: 'richText',
-        },
-      ],
-    },
+    Pages,
+    Tests,
     {
       slug: 'media',
       upload: true,

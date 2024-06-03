@@ -54,6 +54,9 @@ export default buildConfig({
       slug: 'media',
       upload: true,
       fields: [],
+      access: {
+        read: () => true,
+      },
     },
     {
       slug: 'section',

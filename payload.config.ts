@@ -43,7 +43,7 @@ export default buildConfig({
       slug: 'users',
       auth: true,
       access: {
-        delete: () => false,
+        delete: () => true,
         update: () => false,
       },
       fields: [],
@@ -144,8 +144,8 @@ export default buildConfig({
   admin: {
     autoLogin: {
       email: 'dev@payloadcms.com',
-      password: 'test',
-      prefillOnly: true,
+      password: '1234567890',
+      prefillOnly: false,
     },
   },
   async onInit(payload) {
@@ -159,7 +159,7 @@ export default buildConfig({
         collection: 'users',
         data: {
           email: 'dev@payloadcms.com',
-          password: 'test',
+          password: '1234567890',
         },
       })
     }

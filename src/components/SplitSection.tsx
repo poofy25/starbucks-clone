@@ -9,13 +9,6 @@ export default function SplitSection({ blockData }: { blockData: any }) {
         blockData.invertPosition ? 'flex-row-reverse' : 'flex-row'
       }`}
     >
-      <img
-        className="h-full w-[50%] object-cover"
-        src={blockData.image.url}
-        alt="img"
-        width="400"
-        height="400"
-      />
       <Image
         className="h-full w-[50%] object-cover"
         src={`${process.env.WEBSITE_URL}${blockData.image.url}`}

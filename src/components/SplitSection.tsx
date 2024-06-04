@@ -16,6 +16,13 @@ export default function SplitSection({ blockData }: { blockData: any }) {
         width="400"
         height="400"
       />
+      <Image
+        className="h-full w-[50%] object-cover"
+        src={blockData.image.url}
+        alt="img"
+        width="400"
+        height="400"
+      />
       <div
         style={{ color: blockData.textColor }}
         className="w-[50%] flex flex-col justify-center items-center gap-5 p-16 box-border"

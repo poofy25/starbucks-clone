@@ -32,8 +32,14 @@ const dirname = path.dirname(filename)
 
 // Collections import
 
-import Pages from '@/cms-collections/Pages'
-import Tests from '@/cms-collections/Sections'
+import Pages from '@/cms/collections/Pages'
+import Tests from '@/cms/collections/Sections'
+
+// Globals import
+
+import Navigation from '@/cms/globals/Navigation'
+import Logo from '@/cms/globals/Logo'
+import Footer from '@/cms/globals/Footer'
 
 export default buildConfig({
   //editor: slateEditor({}),
@@ -120,6 +126,7 @@ export default buildConfig({
       ],
     },
   ],
+  globals: [Navigation, Logo, Footer],
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),

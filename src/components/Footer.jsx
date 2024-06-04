@@ -12,8 +12,6 @@ export default async function Footer() {
     slug:'footer'
   })
   
-  console.log(data)
-
   return (
 
     <footer className="flex flex-col w-full mt-32 px-10 pt-8 text-black border-0 border-t border-solid border-black box-border">
@@ -27,7 +25,7 @@ export default async function Footer() {
           return (
             <div className="flex flex-col gap-4 text-[18px]" key={index}>
               <h3 className="text-[22px] mb-2">{section.title}</h3>
-              
+
               {/* Mapping through section links */}
               {section.links.map((link, index) => {
                 return (

@@ -1,4 +1,5 @@
 import { CollectionConfig } from 'payload/types'
+import SplitSection from '../blocks/SplitSection'
 
 const Pages: CollectionConfig = {
   slug: 'pages',
@@ -7,12 +8,33 @@ const Pages: CollectionConfig = {
   },
   fields: [
     {
-      name: 'title',
-      type: 'text',
-    },
-    {
-      name: 'content',
-      type: 'richText',
+      type: 'tabs',
+      tabs: [
+        {
+          label: 'Page Data',
+          fields: [
+            {
+              name: 'title',
+              type: 'text',
+            },
+            {
+              name: 'content',
+              type: 'richText',
+            },
+          ],
+        },
+        {
+          label: 'Blocks',
+          fields: [
+            {
+              name: 'blocks',
+              label: 'Section Blocks',
+              type: 'blocks',
+              blocks: [SplitSection],
+            },
+          ],
+        },
+      ],
     },
   ],
 }

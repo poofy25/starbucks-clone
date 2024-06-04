@@ -9,7 +9,7 @@ export default function SplitSection({ blockData }: { blockData: any }) {
         blockData.invertPosition ? 'flex-row-reverse' : 'flex-row'
       }`}
     >
-      <Image
+      <img
         className="h-full w-[50%] object-cover"
         src={blockData.image.url}
         alt="img"

@@ -18,7 +18,7 @@ export default function SplitSection({ blockData }: { blockData: any }) {
       />
       <Image
         className="h-full w-[50%] object-cover"
-        src={`${blockData.image.url}?w=${400}&q=${75}`}
+        src={`${process.env.WEBSITE_URL}${blockData.image.url}`}
         alt="img"
         width="400"
         height="400"

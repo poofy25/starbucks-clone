@@ -5,25 +5,12 @@ import { RootLayout } from '@payloadcms/next/layouts'
 /* DO NOT MODIFY IT BECAUSE IT COULD BE REWRITTEN AT ANY TIME. */
 import React from 'react'
 
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
-
 import './custom.scss'
-import './globals.css'
 
 type Args = {
   children: React.ReactNode
 }
 
-const Layout = ({ children }: Args) => {
-  return (
-    <html className={inter.className}>
-      <body>
-        <RootLayout config={configPromise}>{children}</RootLayout>
-      </body>
-    </html>
-  )
-}
+const Layout = ({ children }: Args) => <RootLayout config={configPromise}>{children}</RootLayout>
 
 export default Layout

@@ -1,5 +1,6 @@
 import { CollectionConfig } from 'payload/types'
 import SplitSection from '../blocks/SplitSection'
+import ImageSwipper from '../blocks/ImageSwipper'
 
 const Pages: CollectionConfig = {
   slug: 'pages',
@@ -16,6 +17,7 @@ const Pages: CollectionConfig = {
             {
               name: 'title',
               type: 'text',
+              required: true,
             },
             {
               name: 'content',
@@ -30,7 +32,7 @@ const Pages: CollectionConfig = {
               name: 'blocks',
               label: 'Section Blocks',
               type: 'blocks',
-              blocks: [SplitSection],
+              blocks: [SplitSection, ImageSwipper],
             },
           ],
         },

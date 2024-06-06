@@ -17,7 +17,7 @@ export default async function Navbar() {
   const links = data.links
 
   return (
-    <nav className="flex text-black mb-12 items-center w-full justify-between h-[100px] shadow-md px-10 box-border">
+    <nav className="flex text-black items-center w-full justify-between h-[100px] shadow-md px-10 box-border">
       <div className="w-[50px] h-[50px]">
         <Image src={`${process.env.WEBSITE_URL}${logo.url}`} alt='logo' width='50' height='50'/>
       </div>

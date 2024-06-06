@@ -11,6 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 export default function ImageSwipper ({blockData}) {
+    console.log(blockData)
     return (
         <Swiper
         modules={[Navigation, Pagination]}

@@ -1,6 +1,6 @@
 'use server'
 import SplitSection from './SplitSection'
-import ImageSwipper from '@/cms/blocks/blocksComponents/ImageSwipper/ImageSwipper'
+// import ImageSwipper from '@/cms/blocks/blocksComponents/ImageSwipper/ImageSwipper'
 
 export default async function HomePageContent({ pageData }: { pageData: any }) {
   return (

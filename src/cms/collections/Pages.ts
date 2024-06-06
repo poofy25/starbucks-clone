@@ -1,6 +1,7 @@
 import { CollectionConfig } from 'payload/types'
 import SplitSection from '../blocks/SplitSection'
 import ImageSwipper from '../blocks/ImageSwipper'
+import PartnersSection from '../blocks/PartnersSection'
 
 const Pages: CollectionConfig = {
   slug: 'pages',
@@ -32,7 +33,7 @@ const Pages: CollectionConfig = {
               name: 'blocks',
               label: 'Section Blocks',
               type: 'blocks',
-              blocks: [SplitSection, ImageSwipper],
+              blocks: [SplitSection, ImageSwipper, PartnersSection],
             },
           ],
         },

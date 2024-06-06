@@ -3,9 +3,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination } from 'swiper/modules'
 
-export const dynamic = 'force-dynamic'
-const revalidate = 0
-
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -15,7 +12,6 @@ import 'swiper/css/pagination';
 
 // Block data is recived from Home server component that fetches the data
 export default function ImageSwipper ({blockData}) {
-    console.log(blockData)
     return (
         <Swiper
         modules={[Navigation, Pagination]}

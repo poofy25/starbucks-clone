@@ -1,6 +1,7 @@
 'use server'
 import SplitSection from './SplitSection'
 import ImageSwipper from '@/cms/blocks/blocksComponents/ImageSwipper/ImageSwipper'
+import PartnersBlock from '@/cms/blocks/blocksComponents/PartersSection/PartnersSection'
 
 export default async function HomePageContent({ pageData }: { pageData: any }) {
   return (
@@ -10,8 +11,10 @@ export default async function HomePageContent({ pageData }: { pageData: any }) {
           return <SplitSection blockData={block} key={index} />
         }
         if (block.blockType === 'imageSwipper') {
-          console.log('BLOCK : ', block)
           return <ImageSwipper blockData={block} key={index} />
+        }
+        if (block.blockType === 'partnersSection') {
+          return <PartnersBlock blockData={block} key={index} />
         }
       })}
     </section>

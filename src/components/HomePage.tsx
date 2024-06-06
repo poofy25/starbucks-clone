@@ -9,6 +9,7 @@ export default async function HomePageContent({ pageData }: { pageData: any }) {
           return <SplitSection blockData={block} key={index} />
         }
         if (block.blockType === 'imageSwipper') {
+          console.log(block)
           return <ImageSwipper blockData={block} key={index} />
         }
       })}

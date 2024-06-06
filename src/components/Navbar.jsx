@@ -19,7 +19,7 @@ export default async function Navbar() {
   return (
     <nav className="flex text-black items-center w-full justify-between h-[100px] shadow-md px-10 box-border">
       <div className="w-[50px] h-[50px]">
-        <Image src={`${process.env.WEBSITE_URL}${logo.url}`} alt='logo' width='50' height='50'/>
+        <Image src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${logo.url}`} alt='logo' width='50' height='50'/>
       </div>
       <div className="flex items-center gap-6 tracking-[1px] font-bold ml-12 mr-auto">
         {links.map((link, index) => {

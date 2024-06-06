@@ -6,8 +6,6 @@ import { Navigation, Pagination } from 'swiper/modules'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import testImg from '/public/testimg.jpg'
-
 import 'swiper/css'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -23,7 +21,7 @@ export default function ImageSwipper ({blockData}) {
                 return (
                     <SwiperSlide key={index}>
                         <Link href={slide.href} className='w-full h-full bg-blue-50 relative'>
-                            <Image src={`${slide.image.url}`}  className='w-full h-full object-cover' width='500' height='500'/>
+                            <Image src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${slide.image.url}`}  className='w-full h-full object-cover' width='500' height='500'/>
                         </Link>
                     </SwiperSlide>
                 )

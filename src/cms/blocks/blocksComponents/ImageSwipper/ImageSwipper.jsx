@@ -13,6 +13,7 @@ import 'swiper/css'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+// Block data is recived from Home server component that fetches the data
 export default function ImageSwipper ({blockData}) {
     console.log(blockData)
     return (

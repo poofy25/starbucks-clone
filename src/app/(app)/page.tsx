@@ -1,3 +1,4 @@
+'use server'
 import HomePageContent from '@/components/HomePage'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'

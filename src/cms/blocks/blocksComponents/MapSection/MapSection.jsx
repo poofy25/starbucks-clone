@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {APIProvider, Map} from '@vis.gl/react-google-maps';
 
-// Block data is recived from Home server component that fetches the data
 
 export default function MapSection() {
   return (

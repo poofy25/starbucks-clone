@@ -25,9 +25,7 @@ export default async function Page() {
 
   return (
     <>
-      <Navbar />
       <HomePageContent pageData={data.docs[0]} />
-      <Footer />
     </>
   )
 }

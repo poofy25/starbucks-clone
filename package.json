@@ -26,6 +26,7 @@
     "@payloadcms/richtext-slate": "3.0.0-beta.36",
     "@payloadcms/storage-uploadthing": "3.0.0-beta.36",
     "@payloadcms/ui": "3.0.0-beta.36",
+    "@vis.gl/react-google-maps": "^1.0.2",
     "babel-plugin-react-compiler": "^0.0.0-experimental-592953e-20240517",
     "cross-env": "^7.0.3",
     "graphql": "^16.8.1",

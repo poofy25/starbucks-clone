@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { getPayloadHMR } from "@payloadcms/next/utilities";
 import configPromise from '@payload-config'
 
+import LocationSvg from '/public/svgs/location.svg'
 
 export default async function Navbar() {
 
@@ -18,28 +19,30 @@ export default async function Navbar() {
 
   return (
     <nav className="flex text-black items-center w-full justify-between h-[100px] shadow-md px-10 box-border">
-      <div className="w-[50px] h-[50px]">
-        <Image src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${logo.url}`} alt='logo' width='50' height='50'/>
-      </div>
-      <div className="flex items-center gap-6 tracking-[1px] font-bold ml-12 mr-auto">
+      
+      <div className="flex flex-1 items-center gap-6 tracking-[1px] font-bold">
         {links.map((link, index) => {
           return (
             <Link className='text-[16px]' href={link.href} key={index}>{link.text}</Link>
           )
         })}
       </div>
-      <div className="flex gap-4 items-center">
+      <Link href='/' className="w-[50px] h-[50px]">
+        <Image src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${logo.url}`} alt='logo' width='50' height='50'/>
+      </Link>
+      <div className="flex gap-4 items-center justify-end flex-1">
         <Link
-          className="px-6 py-2 flex items-center justify-center font-bold rounded-full border border-solid border-black"
-          href="#"
-        >
-          Sign in
+          className="px-6 py-2 flex items-center justify-center font-bold"
+          href="/map"
+        > 
+          <Image src={LocationSvg} alt='location' width='32' height='32'/>
+          GASESTE-NE
         </Link>
         <Link
-          className="px-6 py-2 flex items-center justify-center font-bold text-white bg-black rounded-full border border-solid border-black"
-          href="#"
+          className="px-6 py-2 flex items-center justify-center font-bold text-black  border border-solid border-black"
+          href="tel:+37360020035"
         >
-          Join now
+          +373 600 200 35
         </Link>
       </div>
     </nav>

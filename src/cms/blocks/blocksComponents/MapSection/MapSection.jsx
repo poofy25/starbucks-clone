@@ -6,6 +6,33 @@ import {APIProvider, Map , AdvancedMarker, useMap, useAdvancedMarkerRef, InfoWin
 
 import { useState, useCallback } from 'react';
 
+
+
+export default function MapSection({blockData}) {
+  const locations = blockData.locations
+
+
+
+  return (
+    <section className='w-full h-full px-8'>
+        <APIProvider apiKey={process.env.NEXT_PUBLIC_MAP_API_KEY}>
+            <LocationBlocks locations={locations}/>
+            <Map
+            style={{width: '100%', height: '100%'}}
+            defaultCenter={{lat: 47.02518789880545, lng: 28.83476631234761}}
+            defaultZoom={11}
+            gestureHandlig={'greedy'}
+            disableDefaultUI={true}
+            mapId='MAP_ID'
+            >
+              <PoiMarkers pois={locations} />
+            </Map>
+            
+        </APIProvider>
+    </section>
+  )
+}
+
 const PoiMarkers = (props) => {
   
 
@@ -24,31 +51,6 @@ const PoiMarkers = (props) => {
     </>
   );
 };
-
-export default function MapSection({blockData}) {
-  const locations = blockData.locations
-
-
-
-  return (
-    <section className='w-full h-full px-16'>
-        <APIProvider apiKey={process.env.NEXT_PUBLIC_MAP_API_KEY}>
-            <LocationBlocks locations={locations}/>
-            <Map
-            style={{width: '100%', height: '100%'}}
-            defaultCenter={{lat: 47.02518789880545, lng: 28.83476631234761}}
-            defaultZoom={11}
-            gestureHandlig={'greedy'}
-            disableDefaultUI={true}
-            mapId='MAP_ID'
-            >
-              <PoiMarkers pois={locations} />
-            </Map>
-            
-        </APIProvider>
-    </section>
-  )
-}
 
 const MarkerWithInfoWindow = ({position}) => {
 

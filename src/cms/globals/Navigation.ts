@@ -30,6 +30,27 @@ const Navigation: GlobalConfig = {
         },
       ],
     },
+    {
+      name: 'buttons',
+      label: 'Buttons',
+      type: 'array',
+      required: false,
+      maxRows: 2,
+      fields: [
+        {
+          name: 'text',
+          label: 'Button Text',
+          type: 'text',
+          required: true,
+        },
+        {
+          name: 'href',
+          label: 'Button Href',
+          type: 'text',
+          required: true,
+        },
+      ],
+    },
   ],
 }
 

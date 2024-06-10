@@ -11,6 +11,12 @@ const MapSection: Block = {
       type: 'array',
       fields: [
         {
+          name: 'city',
+          label: 'Localitate',
+          type: 'text',
+          required: true,
+        },
+        {
           name: 'adress',
           label: 'Adress',
           type: 'text',

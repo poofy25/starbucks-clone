@@ -91,10 +91,15 @@ const LocationBlocks = ({locations}) => {
   const map = useMap()
   console.log('map:' , map)
 
-  const handleClick = (position) => {
+  const [currentLocation, setCurrentLocation] = useState(null)
+
+  const handleClick = (position, index) => {
     map.panTo(position);
     map.setZoom(15)
+    setCurrentLocation(index)
   }
+
+
   return (
     <div className='flex w-full gap-8'>
     {locations.map((location, index) => {
@@ -104,9 +109,11 @@ const LocationBlocks = ({locations}) => {
         lng:location.location[1],
       }
 
+      const isSelected = currentLocation === index
+
       return (
-        <div className='cursor-pointer flex-1 p-4 flex items-center justify-center flex-col'
-         key={index} onClick={()=>handleClick(position)}><h3>{location.adress}</h3></div>
+        <div className={`${isSelected ? 'bg-red-500' : ""} cursor-pointer flex-1 p-4 flex items-center justify-center flex-col`}
+         key={index} onClick={()=>handleClick(position, index)}><h3>{location.adress}</h3></div>
       )
     })}
     </div>

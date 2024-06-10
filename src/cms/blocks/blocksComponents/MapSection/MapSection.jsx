@@ -112,7 +112,6 @@ const LocationBlocks = ({locations}) => {
       }
 
       const isSelected = currentLocation === index
-
       return (
         <div className={`${isSelected ? 'bg-red-500' : ""} cursor-pointer flex-1 p-4 flex items-start justify-start flex-col`}
         key={index} onClick={()=>handleClick(position, index)}>

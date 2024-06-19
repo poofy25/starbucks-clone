@@ -25,34 +25,6 @@ const SplitSection: Block = {
       required: true,
     },
     {
-      name: 'backgroundColor',
-      label: 'Background Color',
-      type: 'text',
-      required: true,
-    },
-    {
-      name: 'textColor',
-      label: 'Text Color',
-      type: 'radio',
-      options: [
-        {
-          label: 'White',
-          value: 'white',
-        },
-        {
-          label: 'Black',
-          value: 'black',
-        },
-      ],
-      defaultValue: 'white',
-    },
-    {
-      name: 'buttonFill',
-      label: 'Button Fill',
-      type: 'checkbox',
-      defaultValue: false,
-    },
-    {
       name: 'invertPosition',
       label: 'Invert Position',
       type: 'checkbox',

@@ -9,6 +9,7 @@ const PartnersSection: Block = {
       name: 'partners',
       label: 'Partners',
       type: 'array',
+      maxRows: 2,
       required: true,
       fields: [
         {

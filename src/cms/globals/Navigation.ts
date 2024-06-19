@@ -10,11 +10,16 @@ const Navigation: GlobalConfig = {
       relationTo: 'media',
     },
     {
+      name: 'promoText',
+      type: 'text',
+      label: 'Promotional Line',
+    },
+    {
       name: 'links',
       label: 'Links',
       type: 'array',
       required: false,
-      maxRows: 5,
+      maxRows: 1,
       fields: [
         {
           name: 'text',
@@ -31,22 +36,39 @@ const Navigation: GlobalConfig = {
       ],
     },
     {
-      name: 'buttons',
-      label: 'Buttons',
-      type: 'array',
-      required: false,
-      maxRows: 2,
+      name: 'button1',
+      type: 'group',
+      label: 'Location Button',
       fields: [
         {
           name: 'text',
-          label: 'Button Text',
           type: 'text',
+          label: 'Text',
           required: true,
         },
         {
           name: 'href',
-          label: 'Button Href',
           type: 'text',
+          label: 'Href',
+          required: true,
+        },
+      ],
+    },
+    {
+      name: 'button2',
+      type: 'group',
+      label: 'Call Button',
+      fields: [
+        {
+          name: 'text',
+          type: 'text',
+          label: 'Call number',
+          required: true,
+        },
+        {
+          name: 'href',
+          type: 'text',
+          label: 'Href',
           required: true,
         },
       ],

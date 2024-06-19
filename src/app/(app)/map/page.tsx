@@ -19,7 +19,7 @@ export default async function Page() {
   })
 
   const pageData: any = data.docs[0]
-  console.log(data, pageData)
+  console.log(data, pageData) 
 
   return (
     <main className="w-full h-full">

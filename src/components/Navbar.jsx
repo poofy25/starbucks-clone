@@ -55,7 +55,9 @@ export default async function Navbar() {
           </Link>
           {/* Buttton 2 */}
           <Link
-            className="px-6 py-3 bg-brand_red flex items-center justify-center rounded-full font-medium text-sm  border border-solid border-brand_red"
+            className="px-6 py-3 bg-brand_red flex items-center justify-center rounded-full font-medium text-sm  border border-solid border-brand_red
+            hover:bg-transparent transition-all
+            "
             href={button2.href}
           >
             {button2.text}

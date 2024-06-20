@@ -30,7 +30,9 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
                 </h3>
                 <p className="text-[18px] font-[400]">{partner.description}</p>
                 <Link
-                  className="text-md font-[500] border border-solid rounded-full px-6 py-4 w-fit bg-brand_red text-white flex justify-center items-center"
+                  className="text-md font-[500] rounded-full px-6 py-4 w-fit bg-brand_red text-white flex justify-center items-center
+                  hover:bg-transparent hover:text-brand_red transition-all border border-solid border-brand_red
+                  "
                   href="#"
                 >
                   {partner.buttonText}

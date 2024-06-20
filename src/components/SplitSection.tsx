@@ -18,7 +18,9 @@ export default function SplitSection({ blockData }: { blockData: any }) {
         <h2 className="text-[42px] font-bold">{blockData.title}</h2>
         <p className="text-[18px] my-8">{blockData.description}</p>
         <Link
-          className="text-md font-[500] border border-solid rounded-full px-6 py-4 bg-brand_red text-white flex justify-center items-center"
+          className="text-md font-[500] border border-solid border-brand_red rounded-full px-6 py-4 bg-brand_red text-white flex justify-center items-center
+          hover:bg-transparent hover:text-brand_red transition-all
+          "
           href="#"
         >
           {blockData.buttonText}

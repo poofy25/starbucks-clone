@@ -12,6 +12,7 @@ export default {
       },
       fontFamily: {
         generalSans: ['var(--General-Sans)'],
+        switzer: ['var(--Switzer)'],
       },
     },
   },

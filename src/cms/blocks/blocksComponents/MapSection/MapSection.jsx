@@ -6,6 +6,8 @@ import {APIProvider, Map , AdvancedMarker, useMap, useAdvancedMarkerRef, InfoWin
 
 import { useState, useCallback } from 'react';
 
+import GlovoIconSvg from '/public/svgs/glovoDelivery.svg'
+import StrausIconSvg from '/public/svgs/strausDelivery.svg'
 
 
 export default function MapSection({blockData}) {
@@ -14,11 +16,12 @@ export default function MapSection({blockData}) {
 
 
   return (
-    <section className='w-full h-full px-8'>
+    <section className='w-full h-full flex flex-col justify-center items-center relative'>
         <APIProvider apiKey={process.env.NEXT_PUBLIC_MAP_API_KEY}>
             <LocationBlocks locations={locations}/>
+            <div className='relative w-full h-[700px]'>
             <Map
-            style={{width: '100%', height: '100%'}}
+            style={{width: '100%', height: '700px'}}
             defaultCenter={{lat: 47.02518789880545, lng: 28.83476631234761}}
             defaultZoom={11}
             gestureHandlig={'greedy'}
@@ -27,6 +30,7 @@ export default function MapSection({blockData}) {
             >
               <PoiMarkers pois={locations} />
             </Map>
+            </div>
             
         </APIProvider>
     </section>
@@ -103,7 +107,7 @@ const LocationBlocks = ({locations}) => {
 
 
   return (
-    <div className='flex w-full gap-8'>
+    <div className='flex w-[1410px] gap-[30px]'>
     {locations.map((location, index) => {
 
       const position = {
@@ -113,10 +117,20 @@ const LocationBlocks = ({locations}) => {
 
       const isSelected = currentLocation === index
       return (
-        <div className={`${isSelected ? 'bg-red-500' : ""} cursor-pointer flex-1 p-4 flex items-start justify-start flex-col`}
+        <div className={`${isSelected ? 'border-brand_red' : "border-white"}
+        border-2 border-solid 
+        bg-white rounded-[30px] gap-1 cursor-pointer flex-1 p-8 mb-8 flex items-start justify-start flex-col`}
         key={index} onClick={()=>handleClick(position, index)}>
-          <h3 className='text-xl font-bold'>{location.city}</h3>
+          <h4 className='text-[22px] font-bold mb-1'>{location.city}</h4>
           <p>{location.adress}</p>
+          <p>Livrare și precomandă</p>
+          <p>{location.phone}</p>
+          <p>{location.email}</p>
+          <p>{location.workingHours}</p>
+          <div className='flex gap-4 mt-3'>
+            <Link href='/#' className='cursor-pointer'><Image src={GlovoIconSvg} alt='deliveryLogo' width='40' height='40'/></Link>
+            <Link href='/#' className='cursor-pointer'><Image src={StrausIconSvg} alt='deliveryLogo' width='40' height='40'/></Link>
+          </div>
         </div>
       )
     })}

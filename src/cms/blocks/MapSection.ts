@@ -23,6 +23,24 @@ const MapSection: Block = {
           required: true,
         },
         {
+          name: 'phone',
+          label: 'Phone Number',
+          type: 'text',
+          required: true,
+        },
+        {
+          name: 'email',
+          label: 'Email',
+          type: 'text',
+          required: true,
+        },
+        {
+          name: 'workingHours',
+          label: 'Working Hours',
+          type: 'text',
+          required: true,
+        },
+        {
           name: 'location',
           label: 'Location',
           type: 'point',

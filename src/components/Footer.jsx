@@ -19,7 +19,7 @@ export default async function Footer() {
   
   return (
 
-    <footer className="flex flex-col justify-center items-center w-full bg-black text-white box-border">
+    <footer className="flex flex-col justify-center items-center w-full bg-black text-white box-border font-switzer">
       <Image alt='pattern' src={PatternLineImg} width='1920' height='35'/>
 
       {/* LINKS / SECTIONS */}

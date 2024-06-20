@@ -28,10 +28,24 @@ const GeneralSans = localFont({
   variable: '--General-Sans',
 })
 
+const Switzer = localFont({
+  src: [
+    {
+      path: '../../../public/fonts/Switzer-Regular.ttf',
+      weight: '400',
+    },
+    {
+      path: '../../../public/fonts/Switzer-Medium.ttf',
+      weight: '500',
+    },
+  ],
+  variable: '--Switzer',
+})
+
 /* Our app sits here to not cause any conflicts with payload's root layout  */
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <html className={`${GeneralSans.variable}`}>
+    <html className={`${GeneralSans.variable} ${Switzer.variable}`}>
       <body>
         <Navbar />
 

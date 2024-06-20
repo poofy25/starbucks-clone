@@ -23,9 +23,11 @@ export default async function Footer() {
       <Image alt='pattern' src={PatternLineImg} width='1920' height='35'/>
 
       {/* LINKS / SECTIONS */}
-      <div className="w-[1410px] flex gap-32 py-[72px] justify-start">
+      <div className="flex flex-col w-[85vw] gap-16 py-[72px] justify-start
+      laptop:w-[864px] laptop:gap-32 laptop:flex-row desktop:w-[1410px]
+      ">
 
-        <div className='flex flex-col gap-8 w-[164px]'>
+        <div className='flex flex-col items-center gap-8 w-full laptop:items-start laptop:w-[164px]'>
           <Link href='/'><Image className='object-scale-down' src={data.image.url} width='130' height='100' alt='logo'/></Link>
           <p className='font-[500]'>{data.info}</p>
         </div>
@@ -34,7 +36,7 @@ export default async function Footer() {
         {data.linksSections.map((section, index) => {
 
           return (
-            <div className="flex flex-1 flex-col gap-4 text-[18px]" key={index}>
+            <div className="flex flex-1 items-center flex-col gap-4 text-[18px] laptop:items-start" key={index}>
               <h3 className="text-[20px] font-[500] mb-1 text-brand_red">{section.title}</h3>
 
               {/* Mapping through section links */}
@@ -50,13 +52,13 @@ export default async function Footer() {
 
         {/* Contact section */}
 
-        <div className="flex flex-1 flex-col gap-4 text-[18px]">
+        <div className="flex flex-1 flex-col gap-4 text-[18px] items-center laptop:items-start">
               <h3 className="text-[20px] font-[500] mb-1 text-brand_red">{data.contact.title}</h3>
 
               {/* Mapping through section links */}
               {data.contact.links.map((link, index) => {
                 return (
-                  <div className='flex flex-col gap-2' key={index}>
+                  <div className='flex flex-col items-center gap-2 laptop:items-start' key={index}>
                     <p>{link.title}</p>
                     <Link className="opacity-75 text-base hover:opacity-100" href={link.href} key={index}>{link.text}</Link>
                   </div>
@@ -68,7 +70,9 @@ export default async function Footer() {
       </div>
 
       {/* COPYRIGHT SECTION */}
-      <div className="flex justify-between items-center w-[1410px] py-4 mt-16 box-border">
+      <div className="flex flex-col-reverse w-[85vw] gap-4 justify-between items-center py-4 mt-16 box-border
+      laptop:w-[864px] laptop:flex-row laptop:gap-0 desktop:w-[1410px]
+      ">
         <p className="text-[16px] opacity-75">
           {data.bottomFooter.copyrightText}
         </p>

@@ -24,16 +24,16 @@ export default async function Navbar() {
     <nav className="flex flex-col bg-black text-black items-center w-full justify-evenly h-[118px] shadow-md px-10 box-border">
 
       {promoText && 
-      <div className='text-white w-full bg-brand_red flex justify-center items-center text-sm h-[40px] rounded-[10px]'>
+      <div className='text-white w-full bg-brand_red flex justify-center items-center text-sm px-2 text-center h-[40px] rounded-[10px]'>
         {promoText}
       </div>
       }
 
 
 
-      <div className='flex justify-between items-center h-[48px] w-[1410px]'>
+      <div className='flex justify-between items-center h-[48px] laptop:w-[70vw] laptop:min-w-[864px] desktop:w-[1410px]'>
         {/* Link */}
-        <div className="flex flex-1 items-center text-white gap-6 font-bold">
+        <div className="flex-1 items-center text-white gap-6 font-bold hidden laptop:flex">
           {links.map((link, index) => {
             return (
               <Link className='text-[16px] font-[500]' href={link.href} key={index}>{link.text}</Link>
@@ -44,7 +44,7 @@ export default async function Navbar() {
         <Link href='/' className="w-fit h-fit flex justify-center items-center">
           <Image className='w-fit h-[32px]' src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${logo.url}`} alt='logo' width='160' height='32'/>
         </Link>
-        <div className="flex gap-8 items-center justify-end flex-1 text-white">
+        <div className="flex gap-8 items-center justify-end flex-1 text-white hidden laptop:flex">
           {/* Button 1 */}
           <Link
             className="flex gap-1 items-center justify-center font-medium"

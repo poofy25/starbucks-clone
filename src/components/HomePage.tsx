@@ -1,5 +1,5 @@
 'use server'
-import SplitSection from './SplitSection'
+import SplitSection from '@/cms/blocks/blocksComponents/SplitSection/SplitSection'
 import ImageSwipper from '@/cms/blocks/blocksComponents/ImageSwipper/ImageSwipper'
 import PartnersSection from '@/cms/blocks/blocksComponents/PartersSection/PartnersSection'
 

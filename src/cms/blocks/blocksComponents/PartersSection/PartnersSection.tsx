@@ -7,28 +7,48 @@ import MiniLogoSvg from '/public/svgs/miniLogo.svg'
 
 export default function PartnersSection({ blockData }: { blockData: any }) {
   return (
-    <div className="flex gap-[30px] items-stretch w-[1410px] py-[72px]">
+    <div
+      className="flex flex-col w-[85vw] gap-[30px] items-stretch py-[32px]
+    laptop:w-[864px] laptop:flex-row laptop:py-[72px] desktop:w-[1410px]
+    "
+    >
+      {/* MAPPING THROUGH PARTNER BLOCKS */}
       {blockData.partners.map((partner: any, index: number) => {
         return (
           <div
-            className="flex flex-1 flex-col h-[566px] rounded-[30px] overflow-hidden"
+            className="flex flex-1 flex-col aspect-[1/1] rounded-[30px] overflow-hidden
+            laptop:aspect-[1.25/1] desktop:h-[566px] 
+            "
             key={index}
           >
+            {/* PARTNER IMAGE */}
             <div className="relative w-full h-[50%]">
               <Image
+                className="object-cover"
                 alt="partner image"
                 fill
                 src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${partner.image.url}`}
               />
             </div>
-            <div className="flex flex-1 justify-start pt-8 box-border items-center flex-col bg-white ">
-              <div className="flex gap-8 w-fit h-fit flex-col">
-                <h3 className="text-[32px] font-bold flex justify-center items-center gap-2">
+
+            {/* INFO BOX */}
+            <div className="flex h-[50%] p-4 px-8 justify-start box-border items-center flex-col bg-white laptop:p-4 desktop:pt-8">
+              <div
+                className="flex w-fit h-full flex-col justify-between items-center
+              laptop:gap-4 laptop:items-start laptop:h-fit desktop:gap-8"
+              >
+                <h3
+                  className="font-bold text-[20px] flex justify-center items-center gap-2
+                laptop:text-[24px] desktop:text-[32px]
+                "
+                >
                   <Image src={MiniLogoSvg} width="20" height="32" alt="logo" />
 
                   {partner.title}
                 </h3>
-                <p className="text-[18px] font-[400]">{partner.description}</p>
+                <p className="font-[400] text-center laptop:text-[16px] desktop:text-[18px]">
+                  {partner.description}
+                </p>
                 <Link
                   className="text-md font-[500] rounded-full px-6 py-4 w-fit bg-brand_red text-white flex justify-center items-center
                   hover:bg-transparent hover:text-brand_red transition-all border border-solid border-brand_red

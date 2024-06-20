@@ -12,5 +12,5 @@ html, body, #root {
 }
 
 .swiper-slide{
-    width: 1410px !important;
+    @apply !w-[85vw]
 }

@@ -21,10 +21,10 @@ export default async function Navbar() {
   const button2 = data.button2
 
   return (
-    <nav className="flex flex-col bg-black text-black items-center w-full justify-evenly h-[118px] shadow-md px-10 box-border">
+    <nav className="flex flex-col bg-black text-black items-center w-full justify-evenly min-h-[118px] shadow-md gap-[10px] py-[10px] px-10 box-border">
 
       {promoText && 
-      <div className='text-white w-full bg-brand_red flex justify-center items-center text-sm px-2 text-center h-[40px] rounded-[10px]'>
+      <div className='text-white w-full bg-brand_red flex justify-center items-center text-sm px-4 py-1 text-center min-h-[40px] rounded-[10px]'>
         {promoText}
       </div>
       }

@@ -15,7 +15,7 @@ import 'swiper/css/pagination';
 // Block data is recived from Home server component that fetches the data
 export default function ImageSwipper ({blockData}) {
     return (
-        <section className='aspect-[1.8/1] w-full bg-[#D9D9D9] py-[32px] box-border'>
+        <section className='aspect-[1.5/1] w-full bg-[#D9D9D9] py-[32px] box-border'>
             <Swiper
             modules={[Navigation]}
             spaceBetween={64}
@@ -29,7 +29,8 @@ export default function ImageSwipper ({blockData}) {
                     return (
                         <SwiperSlide key={index}>
                             <Link href={slide.href} className='flex w-full h-full rounded-[20px] overflow-hidden bg-blue-50 relative'>
-                                <Image alt='image' src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${slide.image.url}`} className='w-full h-full' fill/>
+                                <Image alt='image' src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${slide.image.url}`} className='w-full h-full object-fill' fill/>
+
                             </Link>
                         </SwiperSlide>
                     )

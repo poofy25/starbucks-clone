@@ -20,7 +20,8 @@ export default async function Footer() {
   return (
 
     <footer className="flex flex-col justify-center items-center w-full bg-black text-white box-border font-switzer">
-      <Image alt='pattern' src={PatternLineImg} width='1920' height='35'/>
+      {/* PATTERN IMAGE */}
+      <Image alt='pattern' className='h-[35px] w-full object-cover' src={PatternLineImg} width='1920' height='35'/>
 
       {/* LINKS / SECTIONS */}
       <div className="flex flex-col w-[85vw] gap-16 py-[72px] justify-start
@@ -59,7 +60,7 @@ export default async function Footer() {
               {data.contact.links.map((link, index) => {
                 return (
                   <div className='flex flex-col items-center gap-2 laptop:items-start' key={index}>
-                    <p>{link.title}</p>
+                    <p className='text-center laptop:text-start'>{link.title}</p>
                     <Link className="opacity-75 text-base hover:opacity-100" href={link.href} key={index}>{link.text}</Link>
                   </div>
                 )
@@ -70,8 +71,8 @@ export default async function Footer() {
       </div>
 
       {/* COPYRIGHT SECTION */}
-      <div className="flex flex-col-reverse w-[85vw] gap-4 justify-between items-center py-4 mt-16 box-border
-      laptop:w-[864px] laptop:flex-row laptop:gap-0 desktop:w-[1410px]
+      <div className="flex flex-col-reverse w-[85vw] gap-4 justify-between items-center py-4 mt-4 box-border
+      laptop:w-[864px] laptop:my-16 laptop:flex-row laptop:gap-0 desktop:w-[1410px]
       ">
         <p className="text-[16px] opacity-75">
           {data.bottomFooter.copyrightText}

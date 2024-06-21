@@ -16,13 +16,13 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
       {blockData.partners.map((partner: any, index: number) => {
         return (
           <div
-            className="flex flex-1 flex-col aspect-[1/1] rounded-[30px] overflow-hidden
+            className="flex flex-1 flex-col  rounded-[30px] overflow-hidden
             laptop:aspect-[1.25/1] desktop:h-[566px] 
             "
             key={index}
           >
             {/* PARTNER IMAGE */}
-            <div className="relative w-full h-[50%]">
+            <div className="relative w-full aspect-[2/1]">
               <Image
                 className="object-cover"
                 alt="partner image"
@@ -32,7 +32,7 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
             </div>
 
             {/* INFO BOX */}
-            <div className="flex h-[50%] p-4 px-8 justify-start box-border items-center flex-col bg-white laptop:p-4 desktop:pt-8">
+            <div className="flex h-fit p-8 justify-start box-border items-center flex-col bg-white laptop:h-[50%] laptop:p-4 desktop:pt-8">
               <div
                 className="flex w-fit h-full flex-col justify-between items-center
               laptop:gap-4 laptop:items-start laptop:h-fit desktop:gap-8"
@@ -46,9 +46,12 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
 
                   {partner.title}
                 </h3>
-                <p className="font-[400] text-center laptop:text-[16px] desktop:text-[18px]">
+
+                <p className="font-[400] text-center my-4 laptop:text-[16px] desktop:text-[18px]">
                   {partner.description}
                 </p>
+
+                {/* Button */}
                 <Link
                   className="text-md font-[500] rounded-full px-6 py-4 w-fit bg-brand_red text-white flex justify-center items-center
                   hover:bg-transparent hover:text-brand_red transition-all border border-solid border-brand_red

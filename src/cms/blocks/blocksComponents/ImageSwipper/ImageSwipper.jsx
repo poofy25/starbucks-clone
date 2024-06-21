@@ -15,7 +15,7 @@ import 'swiper/css/pagination';
 // Block data is recived from Home server component that fetches the data
 export default function ImageSwipper ({blockData}) {
     return (
-        <section className='aspect-[1.5/1] w-full bg-[#D9D9D9] py-[32px] box-border'>
+        <section className='aspect-[1.5/1] w-full bg-[#D9D9D9] py-[32px] box-border laptop:aspect-[2.8/1]'>
             <Swiper
             modules={[Navigation]}
             spaceBetween={64}

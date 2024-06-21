@@ -8,7 +8,7 @@ import MiniLogoSvg from '/public/svgs/miniLogo.svg'
 export default function PartnersSection({ blockData }: { blockData: any }) {
   return (
     <div
-      className="flex flex-col w-[85vw] gap-[30px] items-stretch py-[32px]
+      className="flex flex-col w-full gap-[30px] items-stretch py-[32px]
     laptop:w-[864px] laptop:flex-row laptop:py-[72px] desktop:w-[1410px]
     "
     >
@@ -38,8 +38,8 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
               laptop:gap-4 laptop:items-start laptop:h-fit desktop:gap-8"
               >
                 <h3
-                  className="font-bold text-[20px] flex justify-center items-center gap-2
-                laptop:text-[24px] desktop:text-[32px]
+                  className="font-bold text-[20px] flex flex-col justify-center items-center gap-2
+                laptop:text-[24px] laptop:flex-row desktop:text-[32px]
                 "
                 >
                   <Image src={MiniLogoSvg} width="20" height="32" alt="logo" />

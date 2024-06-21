@@ -7,13 +7,9 @@ export default function SplitSection({ blockData }: { blockData: any }) {
   return (
     <div
       style={{ backgroundColor: blockData.backgroundColor }}
-      className={`  flex flex-col w-[85vw] justify-center items-center bg-white rounded-[30px]  overflow-hidden
+      className={`flex flex-col-reverse w-full justify-center items-center bg-white rounded-[30px]  overflow-hidden
       laptop:aspect-[2.5/1] laptop:gap-[30px] laptop:flex-row laptop:w-[70vw] laptop:min-w-[864px] desktop:w-[1410px] desktop:h-[566px]
-      ${
-        blockData.invertPosition
-          ? 'flex-col-reverse laptop:flex-row-reverse'
-          : 'flex-col laptop:flex-row'
-      }`}
+      ${blockData.invertPosition ? 'laptop:flex-row-reverse' : 'laptop:flex-row'}`}
     >
       {/* TEXT COMPONENT */}
       <div

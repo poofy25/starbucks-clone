@@ -6,6 +6,8 @@ import configPromise from '@payload-config'
 
 import LocationSvg from '/public/svgs/location.svg'
 
+import NavBarMenu from './NarbarMenu';
+
 export default async function Navbar() {
 
   const payload = await getPayloadHMR({config:configPromise})
@@ -21,17 +23,19 @@ export default async function Navbar() {
   const button2 = data.button2
 
   return (
-    <nav className="flex flex-col bg-black text-black items-center w-full justify-evenly min-h-[118px] shadow-md gap-[10px] py-[10px] px-10 box-border">
-
-      {promoText && 
-      <div className='text-white w-full bg-brand_red flex justify-center items-center text-sm px-4 py-1 text-center min-h-[40px] rounded-[10px]'>
+    <>
+    {promoText && 
+      <div className='text-white w-full bg-brand_red flex justify-center items-center text-sm px-4 py-1 text-center min-h-[40px] tablet:rounded-[10px] tablet:px-10'>
         {promoText}
       </div>
       }
+    <nav className="flex flex-col z-20 bg-black text-black items-center w-full justify-evenly h-[68px] sticky top-0 shadow-md py-[10px] px-[15px] box-border">
+
+      
 
 
 
-      <div className='flex justify-between items-center h-[48px] laptop:w-[70vw] laptop:min-w-[864px] desktop:w-[1410px]'>
+      <div className='flex justify-between w-full items-center h-full laptop:w-[70vw] laptop:min-w-[864px] desktop:w-[1410px]'>
         {/* Link */}
         <div className="flex-1 items-center text-white gap-6 font-bold hidden laptop:flex">
           {links.map((link, index) => {
@@ -44,7 +48,11 @@ export default async function Navbar() {
         <Link href='/' className="w-fit h-fit flex justify-center items-center">
           <Image className='w-fit h-[32px]' src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${logo.url}`} alt='logo' width='160' height='32'/>
         </Link>
-        <div className="flex gap-8 items-center justify-end flex-1 text-white hidden laptop:flex">
+
+        {/* Navbar menu and button */}
+        <NavBarMenu/>
+
+        <div className="gap-8 items-center justify-end flex-1 text-white hidden laptop:flex">
           {/* Button 1 */}
           <Link
             className="flex gap-1 items-center justify-center font-medium"
@@ -65,5 +73,7 @@ export default async function Navbar() {
         </div>
       </div>
     </nav>
+    </>
+
   )
 }

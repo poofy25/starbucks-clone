@@ -11,7 +11,11 @@ export default async function HomePageContent({ pageData }: { pageData: any }) {
           return <ImageSwipper blockData={block} key={index} />
         }
       })}
-      <div className="flex flex-col items-center justify-center gap-[72px] pt-[72px] box-border bg-[#F4EDDC]">
+      <div
+        className="flex flex-col items-center justify-center  px-[15px] gap-[48px] pt-[48px] box-border bg-[#F4EDDC]
+      laptop:gap-[72px] laptop:pt-[72px]
+      "
+      >
         {pageData.blocks.map((block: any, index: number) => {
           if (block.blockType === 'splitSection') {
             return <SplitSection blockData={block} key={index} />

@@ -3,8 +3,6 @@ export const dynamic = 'force-dynamic'
 export const fetchCache = 'force-no-store'
 
 import HomePageContent from '@/components/HomePage'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 
 import { getPayloadHMR } from '@payloadcms/next/utilities'
 import configPromise from '@payload-config'

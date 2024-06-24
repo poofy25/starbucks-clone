@@ -4,7 +4,7 @@ import MiniLogoSvg from '/public/svgs/miniLogo.svg'
 
 export default function MenuSectionCategoryProduct({ productData }: { productData: any }) {
   return (
-    <div className="flex flex-col flex-[1_1_33.33%] gap-8 bg-white max-w-[450px] rounded-[30px] overflow-hidden">
+    <div className="flex flex-col flex-[1_1_calc(33.33%-32px)] gap-8 bg-white max-w-[450px] rounded-[30px] overflow-hidden">
       {/* IMAGE */}
       <figure className="w-full h-fit aspect-[3/2] relative">
         <Image

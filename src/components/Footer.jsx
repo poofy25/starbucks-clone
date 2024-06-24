@@ -22,10 +22,11 @@ export default async function Footer() {
     <footer className="flex flex-col justify-center items-center w-full bg-black text-white box-border font-switzer">
       {/* PATTERN IMAGE */}
       <Image alt='pattern' className='h-[35px] w-full object-cover' src={PatternLineImg} width='1920' height='35'/>
+      <div className='site-container'>
 
       {/* LINKS / SECTIONS */}
-      <div className="flex flex-wrap w-full px-[15px] py-[48px] justify-start
-      laptop:w-[864px] laptop:py-[72px] laptop:gap-32 laptop:flex-row desktop:w-[1410px]
+      <div className="flex flex-wrap w-full  py-[48px] justify-start
+       laptop:py-[72px] laptop:gap-32 laptop:flex-row 
       ">
 
         <div className='flex flex-col items-center gap-8 w-full mb-16 laptop:mb-0 laptop:items-start laptop:w-[164px]'>
@@ -71,8 +72,8 @@ export default async function Footer() {
       </div>
 
       {/* COPYRIGHT SECTION */}
-      <div className="flex flex-col-reverse w-[85vw] gap-4 justify-between items-center py-4 mt-4 box-border
-      laptop:w-[864px] laptop:mt-0 laptop:py-[24px] laptop:flex-row laptop:gap-0 desktop:w-[1410px]
+      <div className="flex flex-col-reverse gap-4 justify-between items-center py-4 mt-4 box-border
+       laptop:mt-0 laptop:py-[24px] laptop:flex-row laptop:gap-0 
       ">
         <p className="text-[16px] opacity-75">
           {data.bottomFooter.copyrightText}
@@ -82,6 +83,7 @@ export default async function Footer() {
           <Link href={data.bottomFooter.facebookHref}><Image src={FacebookSvg} alt='social' height='36' width='36'/></Link>
           <Link href={data.bottomFooter.emailHref}><Image src={EmailSvg} alt='social' height='36' width='36'/></Link>
         </div>
+      </div>
       </div>
     </footer>
   )

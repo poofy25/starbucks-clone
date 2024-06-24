@@ -12,9 +12,10 @@ export default function MenuSectionCategorySection({ category }: { category: any
       </div>
       {/* PRODUCTS */}
       <div className="flex gap-8 flex-wrap">
-        {products.map((product: any, index: number) => (
-          <MenuSectionCategoryProduct productData={product} key={index} />
-        ))}
+        {products &&
+          products.map((product: any, index: number) => (
+            <MenuSectionCategoryProduct productData={product} key={index} />
+          ))}
       </div>
     </div>
   )

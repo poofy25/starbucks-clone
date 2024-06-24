@@ -3,6 +3,7 @@ import SplitSection from '../blocks/SplitSection'
 import ImageSwipper from '../blocks/ImageSwipper'
 import PartnersSection from '../blocks/PartnersSection'
 import MapSection from '../blocks/MapSection'
+import MenuSection from '../blocks/MenuSection'
 
 const Pages: CollectionConfig = {
   slug: 'pages',
@@ -34,7 +35,7 @@ const Pages: CollectionConfig = {
               name: 'blocks',
               label: 'Section Blocks',
               type: 'blocks',
-              blocks: [SplitSection, ImageSwipper, PartnersSection, MapSection],
+              blocks: [SplitSection, ImageSwipper, PartnersSection, MapSection, MenuSection],
             },
           ],
         },

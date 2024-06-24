@@ -1,24 +1,7 @@
 import path from 'path'
 // import { postgresAdapter } from '@payloadcms/db-postgres'
 import { en } from 'payload/i18n/en'
-import {
-  AlignFeature,
-  BlockquoteFeature,
-  BlocksFeature,
-  BoldFeature,
-  ChecklistFeature,
-  HeadingFeature,
-  IndentFeature,
-  InlineCodeFeature,
-  ItalicFeature,
-  lexicalEditor,
-  LinkFeature,
-  OrderedListFeature,
-  ParagraphFeature,
-  RelationshipFeature,
-  UnorderedListFeature,
-  UploadFeature,
-} from '@payloadcms/richtext-lexical'
+import { lexicalEditor } from '@payloadcms/richtext-lexical'
 //import { slateEditor } from '@payloadcms/richtext-slate'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { buildConfig } from 'payload/config'
@@ -33,6 +16,8 @@ const dirname = path.dirname(filename)
 // Collections import
 
 import Pages from '@/cms/collections/Pages'
+import Categories from '@/cms/collections/Categories'
+import Products from '@/cms/collections/Products'
 
 // Globals import
 
@@ -54,6 +39,8 @@ export default buildConfig({
       fields: [],
     },
     Pages,
+    Categories,
+    Products,
     {
       slug: 'media',
       upload: true,
@@ -68,11 +55,6 @@ export default buildConfig({
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
-  // db: postgresAdapter({
-  //   pool: {
-  //     connectionString: process.env.POSTGRES_URI || ''
-  //   }
-  // }),
   db: mongooseAdapter({
     url: process.env.MONGODB_URI || '',
   }),

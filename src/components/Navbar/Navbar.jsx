@@ -23,7 +23,7 @@ export default async function Navbar() {
   const button2 = data.button2
 
   return (
-    <header className='w-full bg-black sticky top-0'>
+    <header className='w-full bg-black sticky top-0 z-20'>
       <div className='site-container w-full'>
 
         {promoText && 

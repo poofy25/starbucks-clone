@@ -5,7 +5,7 @@ import MiniLogoSvg from '/public/svgs/miniLogo.svg'
 
 export default function SplitSection({ blockData }: { blockData: any }) {
   return (
-    <div
+    <section
       style={{ backgroundColor: blockData.backgroundColor }}
       className={`flex flex-col-reverse w-full justify-center items-center bg-white rounded-[30px]  overflow-hidden
       laptop:aspect-[2.5/1] laptop:gap-[30px] laptop:flex-row laptop:w-[70vw] laptop:min-w-[864px] desktop:w-[1410px] desktop:h-[566px]
@@ -47,6 +47,6 @@ export default function SplitSection({ blockData }: { blockData: any }) {
         width="400"
         height="400"
       />
-    </div>
+    </section>
   )
 }

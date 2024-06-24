@@ -25,8 +25,10 @@ export default async function Navbar() {
   return (
     <>
     {promoText && 
-      <div className='text-white w-full bg-brand_red flex justify-center items-center text-sm px-4 py-1 text-center min-h-[40px] tablet:rounded-[10px] tablet:px-10'>
-        {promoText}
+      <div className='w-full bg-black desktop:'>
+        <div className='text-white w-full bg-brand_red flex justify-center items-center text-sm px-4 py-1 text-center min-h-[40px] tablet:rounded-[10px] tablet:px-10'>
+          {promoText}
+        </div>
       </div>
       }
     <nav className="flex flex-col z-20 bg-black text-black items-center w-full justify-evenly h-[68px] sticky top-0 shadow-md py-[10px] px-[15px] box-border">

@@ -72,7 +72,7 @@ export default async function Footer() {
 
       {/* COPYRIGHT SECTION */}
       <div className="flex flex-col-reverse w-[85vw] gap-4 justify-between items-center py-4 mt-4 box-border
-      laptop:w-[864px] laptop:my-16 laptop:flex-row laptop:gap-0 desktop:w-[1410px]
+      laptop:w-[864px] laptop:mt-0 laptop:py-[24px] laptop:flex-row laptop:gap-0 desktop:w-[1410px]
       ">
         <p className="text-[16px] opacity-75">
           {data.bottomFooter.copyrightText}

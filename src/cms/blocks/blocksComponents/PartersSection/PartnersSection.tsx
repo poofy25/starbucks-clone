@@ -22,7 +22,7 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
             key={index}
           >
             {/* PARTNER IMAGE */}
-            <div className="relative w-full aspect-[2/1]">
+            <div className="relative w-full aspect-[2/1] desktop:h-[50%] desktop:aspect-[uset]">
               <Image
                 className="object-cover"
                 alt="partner image"
@@ -47,13 +47,13 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
                   {partner.title}
                 </h3>
 
-                <p className="font-[400] text-center my-4 laptop:text-[16px] desktop:text-[18px]">
+                <p className="font-[400] text-center my-4 laptop:text-[16px] desktop:m-0 desktop:text-[18px]">
                   {partner.description}
                 </p>
 
                 {/* Button */}
                 <Link
-                  className="text-md font-[500] rounded-full px-6 py-4 w-fit bg-brand_red text-white flex justify-center items-center
+                  className="text-sm font-[500] rounded-full px-6 py-4 w-fit bg-brand_red text-white flex justify-center items-center
                   hover:bg-transparent hover:text-brand_red transition-all border border-solid border-brand_red
                   "
                   href="#"

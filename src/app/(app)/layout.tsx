@@ -48,7 +48,6 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     <html className={`${GeneralSans.variable} ${Switzer.variable}`}>
       <body>
         <Navbar />
-
         {children}
         <Footer />
       </body>

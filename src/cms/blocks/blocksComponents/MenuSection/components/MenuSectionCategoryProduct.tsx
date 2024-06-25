@@ -5,7 +5,7 @@ import MiniLogoSvg from '/public/svgs/miniLogo.svg'
 
 export default function MenuSectionCategoryProduct({ productData }: { productData: any }) {
   return (
-    <div className="flex flex-col flex-[1_1_calc(33.33%-32px)] gap-8 bg-white max-w-[450px] rounded-[30px] overflow-hidden">
+    <div className="flex flex-col flex-[1_1_calc(33.33%-35px)]  bg-white max-w-[450px] rounded-[30px] overflow-hidden">
       {/* IMAGE */}
       <div className="w-full aspect-[3/2] relative rounded-[30px] overflow-hidden">
         {productData.image.url && (
@@ -24,10 +24,10 @@ export default function MenuSectionCategoryProduct({ productData }: { productDat
         /> */}
       </div>
       {/* TEXT DATA */}
-      <div className="flex flex-col flex-1 gap-8 p-8 pt-0 w-full">
+      <div className="flex flex-col flex-1 gap-[30px] p-[30px] w-full">
         {/* HEADER */}
-        <div className="flex justify-between items-center w-full gap-4">
-          <div className="flex justify-center items-center gap-4">
+        <div className="flex justify-between items-center w-full gap-[15px]">
+          <div className="flex justify-center items-center gap-[15px]">
             <Image src={MiniLogoSvg} width="20" height="32" alt="logo" />
             <h4 className="text-[24px] font-bold">{productData.name}</h4>
           </div>

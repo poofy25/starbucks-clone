@@ -107,7 +107,7 @@ const LocationBlocks = ({locations}) => {
 
 
   return (
-    <div className='flex w-[1410px] gap-[30px]'>
+    <div className='site-container flex gap-[30px] mb-[70px]'>
     {locations.map((location, index) => {
 
       const position = {
@@ -119,7 +119,7 @@ const LocationBlocks = ({locations}) => {
       return (
         <div className={`${isSelected ? 'border-brand_red' : "border-white"}
         border-2 border-solid 
-        bg-white rounded-[30px] gap-1 cursor-pointer flex-1 p-8 mb-8 flex items-start justify-start flex-col`}
+        bg-white rounded-[30px] gap-1 cursor-pointer flex-1 p-8 flex items-start justify-start flex-col`}
         key={index} onClick={()=>handleClick(position, index)}>
           <h4 className='text-[22px] font-bold mb-1'>{location.city}</h4>
           <p>{location.adress}</p>

@@ -7,8 +7,15 @@ export default function MenuSectionCategoryProduct({ productData }: { productDat
     <div className="flex flex-col flex-[1_1_calc(33.33%-32px)] gap-8 bg-white max-w-[450px] rounded-[30px] overflow-hidden">
       {/* IMAGE */}
       <figure className="w-full h-fit aspect-[3/2] relative">
-        <Image
+        {/* <Image
           src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${productData.image.url}`}
+          alt="product image"
+          //   width="275"
+          //   height="275"
+          fill
+        /> */}
+        <Image
+          src={`${productData.image.url}`}
           alt="product image"
           //   width="275"
           //   height="275"

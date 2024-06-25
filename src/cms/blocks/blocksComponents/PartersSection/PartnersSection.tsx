@@ -8,8 +8,8 @@ import MiniLogoSvg from '/public/svgs/miniLogo.svg'
 export default function PartnersSection({ blockData }: { blockData: any }) {
   return (
     <div
-      className="flex flex-col w-full gap-[30px] items-stretch pt-[32px]
-       laptop:flex-row laptop:pt-[72px] 
+      className="flex flex-col w-full gap-[30px] items-stretch
+       laptop:flex-row
     "
     >
       {/* MAPPING THROUGH PARTNER BLOCKS */}
@@ -17,12 +17,11 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
         return (
           <div
             className="flex flex-1 flex-col  rounded-[30px] overflow-hidden
-            laptop:aspect-[1.25/1] desktop:h-[566px] 
             "
             key={index}
           >
             {/* PARTNER IMAGE */}
-            <div className="relative w-full aspect-[2/1] desktop:h-[50%] desktop:aspect-[uset]">
+            <div className="relative w-full aspect-[2/1] desktop:aspect-[uset]">
               <Image
                 className="object-cover"
                 alt="partner image"
@@ -32,10 +31,10 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
             </div>
 
             {/* INFO BOX */}
-            <div className="flex h-fit p-8 justify-start box-border items-center flex-col bg-white laptop:h-[50%] laptop:p-4 desktop:pt-8">
+            <div className="flex h-fit p-[30px] justify-start box-border items-center flex-col bg-white">
               <div
                 className="flex w-fit h-full flex-col justify-between items-center
-              laptop:gap-4 laptop:items-start laptop:h-fit desktop:gap-8"
+              laptop:h-fit desktop:gap-[30px]"
               >
                 <h3
                   className="font-bold text-center text-[28px] flex flex-col justify-center items-center gap-2

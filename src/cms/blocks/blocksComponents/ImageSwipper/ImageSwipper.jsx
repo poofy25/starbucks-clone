@@ -17,10 +17,10 @@ export default function ImageSwipper ({blockData}) {
     return (
         <div className='bg-[#F4F3F3] overflow-hidden'>
 
-            <section className='site-container aspect-[1.5/1] py-[32px] box-border   laptop:aspect-[2.8/1] desktop:py-[72px] '>
+            <section className='site-container aspect-[1.5/1] py-[30px] box-border   laptop:aspect-[2.8/1] desktop:py-[30px] '>
                     <Swiper
                     modules={[Navigation]}
-                    spaceBetween={64}
+                    spaceBetween={30}
                     slidesPerView={'auto'}
                     centeredSlides={true}
                     loop={true}

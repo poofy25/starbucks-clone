@@ -26,11 +26,9 @@ export default async function Navbar() {
     <header className='w-full bg-black sticky top-0 z-20'>
 
         {promoText && 
-          <div className='w-[100vw] ml-[-15px] bg-black laptop:w-full laptop:ml-auto laptop:pt-[10px] laptop:px-[40px] '>
-            <div className='text-white w-full bg-brand_red flex justify-center items-center text-sm py-1 px-[15px] text-center min-h-[40px] tablet:rounded-[10px] tablet:px-10 laptop:h-[40px]'>
+            <div className='text-white w-full bg-brand_red flex justify-center items-center text-sm py-1 px-[15px] text-center tablet:px-10 laptop:h-[40px]'>
               {promoText}
             </div>
-          </div>
           }
        <div className='site-container w-full'>
         <nav className="flex flex-col z-20 bg-black text-black items-center w-full justify-evenly h-[68px] sticky top-0 shadow-md py-[10px] box-border">

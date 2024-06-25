@@ -13,6 +13,15 @@ html, body, #root {
     @apply font-generalSans
 }
 
+.body {
+    font-size: 14px;
+padding: 0 35px;
+height: 55px;
+text-transform: uppercase;
+-moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
+}
+
 .swiper-slide{
     @apply !w-full
 }
@@ -29,7 +38,7 @@ html, body, #root {
 figure {
     height: 200px;
     width: 100%;
-    @apply tablet:h-fit desktop:h-[600px]
+    @apply tablet:h-fit desktop:h-[500px]
 }
 figure img {
     width: 100%;
@@ -37,4 +46,17 @@ figure img {
     border-radius: 25px;
     object-fit: fill;
     object-position: center center;
+}
+
+
+
+.ctaBtn{
+    font-size: 14px;
+    padding: 0 35px;
+    height: 55px;
+    text-transform: uppercase;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    line-height: normal
 }

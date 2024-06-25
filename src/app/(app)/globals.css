@@ -15,11 +15,11 @@ html, body, #root {
 
 .body {
     font-size: 14px;
-padding: 0 35px;
-height: 55px;
-text-transform: uppercase;
--moz-osx-font-smoothing: grayscale;
--webkit-font-smoothing: antialiased;
+    padding: 0 35px;
+    height: 55px;
+    text-transform: uppercase;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
 .swiper-slide{
@@ -55,6 +55,7 @@ figure img {
     padding: 0 35px;
     height: 55px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 h1,h2,h3,h4,h5,h6 {

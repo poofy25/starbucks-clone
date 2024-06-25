@@ -14,7 +14,7 @@ export default async function Page() {
     depth: 3,
     where: {
       title: {
-        equals: 'Meniu',
+        equals: 'Menu',
       },
     },
   })

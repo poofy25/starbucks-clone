@@ -14,10 +14,6 @@ html, body, #root {
 }
 
 .body {
-    font-size: 14px;
-    padding: 0 35px;
-    height: 55px;
-    text-transform: uppercase;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }

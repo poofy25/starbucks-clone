@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
 
 import MiniLogoSvg from '/public/svgs/miniLogo.svg'
@@ -6,22 +7,22 @@ export default function MenuSectionCategoryProduct({ productData }: { productDat
   return (
     <div className="flex flex-col flex-[1_1_calc(33.33%-32px)] gap-8 bg-white max-w-[450px] rounded-[30px] overflow-hidden">
       {/* IMAGE */}
-      <figure className="w-full h-fit aspect-[3/2] relative">
-        {/* <Image
+      <div className="w-full aspect-[3/2] relative rounded-[30px] overflow-hidden">
+        <Image
           src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${productData.image.url}`}
           alt="product image"
-          //   width="275"
-          //   height="275"
-          fill
-        /> */}
-        <Image
-          src={`${productData.image.url}`}
-          alt="product image"
-          //   width="275"
-          //   height="275"
+          // width="450"
+          // height="300"
           fill
         />
-      </figure>
+        {/* <img
+          className="classname"
+          src={`${productData.image.url}`}
+          alt="product image"
+          width="275"
+          height="275"
+        /> */}
+      </div>
       {/* TEXT DATA */}
       <div className="flex flex-col flex-1 gap-8 p-8 pt-0 w-full">
         {/* HEADER */}

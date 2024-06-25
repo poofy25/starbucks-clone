@@ -50,7 +50,7 @@ export default async function Navbar() {
             </div>
             {/* Logo */}
             <Link href='/' className="w-fit h-fit flex justify-center items-center">
-              <Image className='w-fit h-[32px]' src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${logo.url}`} alt='logo' width='160' height='32'/>
+              <Image className='w-fit h-[32px]' src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${logo.url}`} alt='logo' width='160' height='32' priority />
             </Link>
 
             {/* Navbar menu and button */}

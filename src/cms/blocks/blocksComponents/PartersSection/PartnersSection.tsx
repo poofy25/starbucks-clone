@@ -52,7 +52,7 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
 
                 {/* Button */}
                 <Link
-                  className="text-sm font-[500] rounded-full px-6 py-4 w-fit bg-brand_red text-white flex justify-center items-center
+                  className="ctaBtn text-sm font-[500] rounded-full bg-brand_red text-white flex justify-center items-center
                   hover:bg-transparent hover:text-brand_red transition-all border border-solid border-brand_red
                   "
                   href="#"

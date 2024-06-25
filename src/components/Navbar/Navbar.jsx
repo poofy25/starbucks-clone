@@ -26,7 +26,7 @@ export default async function Navbar() {
     <header className='w-full bg-black sticky top-0 z-20'>
 
         {promoText && 
-            <div className='text-white w-full bg-brand_red flex justify-center items-center text-sm py-1 px-[15px] text-center tablet:px-10 laptop:h-[40px]'>
+            <div className='text-white w-full font-[500] bg-brand_red flex justify-center items-center text-[13px] py-1 px-[15px] text-center h-[35px]'>
               {promoText}
             </div>
           }
@@ -42,13 +42,13 @@ export default async function Navbar() {
             <div className="flex-1 items-center text-white gap-6 font-bold hidden laptop:flex">
               {links.map((link, index) => {
                 return (
-                  <Link className='text-[16px] font-[500]' href={link.href} key={index}>{link.text}</Link>
+                  <Link className='text-[14px] font-[500]' href={link.href} key={index}>{link.text}</Link>
                 )
               })}
             </div>
             {/* Logo */}
             <Link href='/' className="w-fit h-fit flex justify-center items-center">
-              <Image className='w-fit h-[32px]' src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${logo.url}`} alt='logo' width='160' height='32' priority />
+              <Image className='w-fit h-[27px]' src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${logo.url}`} alt='logo' width='160' height='32' priority />
             </Link>
 
             {/* Navbar menu and button */}
@@ -57,15 +57,15 @@ export default async function Navbar() {
             <div className="gap-8 items-center justify-end flex-1 text-white hidden laptop:flex">
               {/* Button 1 */}
               <Link
-                className="flex gap-1 items-center justify-center font-medium"
+                className="flex gap-1 text-[14px] items-center justify-center font-medium"
                 href={button1.href}
               > 
-                <Image src={LocationSvg} alt='location' width='32' height='32'/>
+                <Image className='max-w-[20px]' src={LocationSvg} alt='location' width='32' height='32'/>
                 {button1.text}
               </Link>
               {/* Buttton 2 */}
               <Link
-                className="px-6 py-3 bg-brand_red flex items-center justify-center rounded-full font-medium text-sm  border border-solid border-brand_red
+                className="px-[25px] h-[40px] bg-brand_red flex items-center justify-center rounded-full font-medium text-[14px]  border border-solid border-brand_red
                 hover:bg-transparent transition-all
                 "
                 href={button2.href}

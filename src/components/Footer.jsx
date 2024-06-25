@@ -29,8 +29,9 @@ export default async function Footer() {
         laptop:py-[70px] laptop:gap-32 laptop:flex-row 
         ">
 
+          {/* LOGO */}
           <div className='flex flex-col items-center gap-8 w-full mb-16 laptop:mb-0 laptop:items-start laptop:w-[164px]'>
-            <Link href='/'><Image className='object-scale-down' src={data.image.url} width='130' height='100' alt='logo'/></Link>
+            <Link href='/'><Image className='object-scale-down h-[75px] w-auto' src={data.image.url} width='130' height='100' alt='logo'/></Link>
             <p className='font-[500]'>{data.info}</p>
           </div>
 
@@ -39,7 +40,7 @@ export default async function Footer() {
 
             return (
               <div className="flex flex-[0_0_50%] max-w-[50%] items-center flex-col gap-4 text-[18px] laptop:flex-1 laptop:items-start" key={index}>
-                <h3 className="text-[20px] font-[500] mb-1 text-brand_red">{section.title}</h3>
+                <h3 className="text-[20px] font-[500] text-brand_red">{section.title}</h3>
 
                 {/* Mapping through section links */}
                 {section.links.map((link, index) => {
@@ -55,7 +56,7 @@ export default async function Footer() {
           {/* Contact section */}
 
           <div className="flex w-full flex-col gap-4 text-[18px] items-center mt-16 laptop:mt-0 laptop:flex-1 laptop:items-start">
-                <h3 className="text-[20px] font-[500] mb-1 text-brand_red">{data.contact.title}</h3>
+                <h3 className="text-[20px] font-[500] text-brand_red">{data.contact.title}</h3>
 
                 {/* Mapping through section links */}
                 {data.contact.links.map((link, index) => {
@@ -73,7 +74,7 @@ export default async function Footer() {
       </div>
 
         {/* COPYRIGHT SECTION */}
-        <div className='w-full border-0 border-t border-solid border-white'>
+        <div className='w-full border-0 border-t border-solid border-white border-opacity-20'>
 
           <div className='site-container'>
             <div className="flex flex-col-reverse gap-4 justify-between items-center py-4 mt-4 box-border

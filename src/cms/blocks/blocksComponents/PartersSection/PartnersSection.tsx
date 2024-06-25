@@ -33,8 +33,8 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
             {/* INFO BOX */}
             <div className="flex h-fit p-[30px] justify-start box-border items-center flex-col bg-white">
               <div
-                className="flex w-fit h-full flex-col justify-between items-center
-              laptop:h-fit desktop:gap-[30px]"
+                className="flex w-fit h-fit flex-col justify-between items-center
+              gap-[25px]"
               >
                 <h3
                   className="font-bold text-center text-[28px] flex flex-col justify-center items-center gap-2

@@ -17,7 +17,7 @@ export default async function HomePageContent({ pageData }: { pageData: any }) {
       >
         <section
           className="site-container flex flex-col items-center justify-center px-[15px] gap-[48px] py-[32px] box-border
-      laptop:gap-[70px] laptop:py-[30px]"
+      laptop:gap-[70px] laptop:py-[70px]"
         >
           {pageData.blocks.map((block: any, index: number) => {
             if (block.blockType === 'splitSection') {

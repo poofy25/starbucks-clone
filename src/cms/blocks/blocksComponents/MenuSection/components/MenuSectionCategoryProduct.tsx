@@ -8,11 +8,13 @@ export default function MenuSectionCategoryProduct({ productData }: { productDat
     <div className="flex flex-col flex-[1_1_calc(33.33%-32px)] gap-8 bg-white max-w-[450px] rounded-[30px] overflow-hidden">
       {/* IMAGE */}
       <div className="w-full aspect-[3/2] relative rounded-[30px] overflow-hidden">
-        <Image
-          src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${productData.image.url}`}
-          alt="product image"
-          fill
-        />
+        {productData.image.url && (
+          <Image
+            src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${productData.image.url}`}
+            alt="product image"
+            fill
+          />
+        )}
         {/* <img
           className="classname"
           src={`${productData.image.url}`}

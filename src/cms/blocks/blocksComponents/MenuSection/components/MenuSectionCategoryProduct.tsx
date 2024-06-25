@@ -11,8 +11,6 @@ export default function MenuSectionCategoryProduct({ productData }: { productDat
         <Image
           src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${productData.image.url}`}
           alt="product image"
-          // width="450"
-          // height="300"
           fill
         />
         {/* <img

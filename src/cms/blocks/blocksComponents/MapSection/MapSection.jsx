@@ -151,7 +151,8 @@ const LocationBlocks = ({locations}) => {
         border-2 border-solid bg-white rounded-[30px] gap-1 cursor-pointer flex-1 p-[30px] flex items-start justify-start flex-col
         laptop:p-[25px]
         tablet:min-w-[350px]
-        mobile:min-w-[300px]
+        mobile:p-[20px]
+        mobile:min-w-[300px] 
         `}
 
         key={index}

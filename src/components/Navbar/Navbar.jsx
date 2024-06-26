@@ -23,16 +23,18 @@ export default async function Navbar() {
   const button2 = data.button2
 
   return (
-    <header className='w-full bg-black sticky top-0 z-20'>
-
-        {/* PROMOTIONAL TEXT */}
-        {promoText && 
+    <>
+    {/* PROMOTIONAL TEXT */}
+    {promoText && 
             <div className='text-white w-full font-[500] bg-brand_red flex justify-center items-center text-[13px] px-[15px] text-center h-[35px]
             mobile:text-[11px] mobile:h-[30px]
             '>
               {promoText}
             </div>
         }
+    <header className='w-full bg-black sticky top-0 z-20'>
+
+        
 
        <div className='site-container w-full'>
         <nav className="flex flex-col z-20 bg-black text-black items-center w-full justify-evenly h-[68px] sticky top-0 shadow-md py-[10px] box-border
@@ -97,6 +99,7 @@ export default async function Navbar() {
     </div>
 
     </header>
+    </>
 
   )
 }

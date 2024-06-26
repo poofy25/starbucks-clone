@@ -6,10 +6,15 @@ export default function MenuSectionNavigation({ menuCategories }: { menuCategori
   return (
     <div
       className=" bg-white sticky top-[103px] py-[15px] overflow-x-auto z-10 border-0 border-b border-solid border-black
-    tablet:top-[95px]
+    tablet:top-[95px] 
+    mobile:top-[55px]
     "
     >
-      <div className="site-container flex justify-center items-center gap-[50px] overflow-x-auto">
+      <div
+        className="site-container flex justify-center items-center gap-[50px] overflow-x-auto
+      tablet:justify-start
+      "
+      >
         {menuCategories.map((category: any, index: number) => (
           <Link
             className="text-[14px] font-[500] whitespace-nowrap"

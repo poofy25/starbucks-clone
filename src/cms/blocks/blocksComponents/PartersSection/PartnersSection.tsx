@@ -9,7 +9,9 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
   return (
     <div
       className="flex w-full gap-[30px] items-stretch flex-row
-      tablet:flex-col"
+      tablet:flex-col
+      mobile:gap-[15px]
+      "
     >
       {/* PARTNER BLOCKS */}
       {blockData.partners.map((partner: any, index: number) => {
@@ -30,13 +32,19 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
             </div>
 
             {/* INFO BOX */}
-            <div className="flex h-fit p-[30px] justify-start box-border items-center flex-col bg-white">
+            <div
+              className="flex h-fit p-[30px] justify-start box-border items-center flex-col bg-white
+            mobile:p-[20px]
+            "
+            >
               <div
                 className="flex w-fit h-fit flex-col justify-between items-center
-              gap-[25px]"
+              gap-[25px]
+              mobile:gap-[20px]
+              "
               >
                 <h3
-                  className="font-bold flex justify-center items-center gap-2
+                  className="font-[600] flex justify-center items-center gap-2
                    text-start flex-row text-[32px]
                    laptop:text-[28px]
                 "
@@ -46,7 +54,7 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
                   {partner.title}
                 </h3>
 
-                <p className="font-[400] text-center m-0 text-[18px]">{partner.description}</p>
+                <p className="font-[400] text-center m-0">{partner.description}</p>
 
                 {/* CTA Button */}
                 <Link
@@ -54,6 +62,7 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
                   hover:bg-transparent hover:text-brand_red transition-all border border-solid border-brand_red
                   "
                   href="#"
+                  target="_blank"
                 >
                   {partner.buttonText}
                 </Link>

@@ -8,7 +8,7 @@ import MiniLogoSvg from '/public/svgs/miniLogo.svg'
 export default function PartnersSection({ blockData }: { blockData: any }) {
   return (
     <div
-      className="flex w-full gap-[30px] items-stretch flex-row
+      className="flex w-full gap-[20px] items-stretch flex-row
       tablet:flex-col
       mobile:gap-[15px]
       "

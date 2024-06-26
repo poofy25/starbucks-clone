@@ -33,7 +33,11 @@ export default async function Page() {
       laptop:py-[35px]
       "
       >
-        <h2 className=" flex gap-2 items-center justify-center font-bold text-[38px] ">
+        <h2
+          className=" flex gap-2 items-center justify-center font-bold text-[38px]
+         laptop:text-[32px]
+         "
+        >
           <Image
             alt="miniLogo"
             src={MiniLogoSvg}

@@ -18,7 +18,7 @@ export default function MenuSectionCategorySection({ category }: { category: any
         </p>
       </div>
       {/* PRODUCTS */}
-      <div className="flex gap-[30px] flex-wrap">
+      <div className="flex gap-[20px] flex-wrap">
         {products &&
           products.map((product: any, index: number) => (
             <MenuSectionCategoryProduct productData={product} key={index} />

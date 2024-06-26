@@ -129,8 +129,10 @@ const LocationBlocks = ({locations}) => {
 
 
   return (
-    <div className='site-container flex gap-[30px] mb-[70px]
+    <div className='site-container flex gap-[20px] mb-[70px]
+    laptop:mb-[35px]
     tablet:overflow-auto tablet:[35px]
+
     '>
 
     {locations.map((location, index) => {

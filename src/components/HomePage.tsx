@@ -18,7 +18,8 @@ export default async function HomePageContent({ pageData }: { pageData: any }) {
         <section
           className="site-container flex flex-col items-center justify-center px-[15px] box-border
           gap-[70px] py-[70px]
-          tablet:py-[35px] tablet:gap-[35px]
+          laptop:py-[35px]
+          tablet:gap-[35px]
           "
         >
           {pageData.blocks.map((block: any, index: number) => {

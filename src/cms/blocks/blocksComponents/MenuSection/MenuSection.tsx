@@ -8,7 +8,7 @@ export default function MenuSection({ menuData }: { menuData: any }) {
       <MenuSectionNavigation menuCategories={menuData.categories} />
       <div
         className="flex flex-col gap-[50px] py-[70px]
-      tablet:py-[35px]
+      laptop:py-[35px]
       "
       >
         {menuData.categories.map((category: any, index: number) => (

@@ -13,6 +13,7 @@ const ImageSwipperNavigation = () => {
         <>
             <button className="w-[45px] translate-x-[-50%] aspect-square absolute top-[50%] z-10 translate-y-[-50%] flex items-center justify-center rounded-full bg-brand_red
             laptop_xl:translate-x-[-15px]
+            laptop:w-[45px]
             " 
             onClick={()=>{swiper.slidePrev()}}>
 
@@ -21,6 +22,7 @@ const ImageSwipperNavigation = () => {
 
             <button className="w-[45px] translate-x-[50%] aspect-square absolute top-[50%] z-10 translate-y-[-50%] right-0 flex items-center justify-center rounded-full bg-brand_red
             laptop_xl:translate-x-[15px]
+            laptop:w-[45px]
             " 
             onClick={()=>{swiper.slideNext()}}>
 

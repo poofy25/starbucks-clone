@@ -60,6 +60,7 @@ figure img {
     height: 55px;
     text-transform: uppercase;
     text-align: center;
+    @apply laptop:h-[50px]
 }
 
 h1,h2,h3,h4,h5,h6 {

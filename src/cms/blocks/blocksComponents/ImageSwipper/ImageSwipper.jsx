@@ -15,7 +15,7 @@ import 'swiper/css/pagination';
 // Block data is recived from Home server component that fetches the data
 export default function ImageSwipper ({blockData}) {
     return (
-        <div className='bg-[#F4F3F3] overflow-hidden'>
+        <div className='overflow-hidden'>
 
             <section className='site-container box-border aspect-[2.8/1] py-[30px] '>
                     <Swiper

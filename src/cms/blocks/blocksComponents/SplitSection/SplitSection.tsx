@@ -16,19 +16,29 @@ export default function SplitSection({ blockData }: { blockData: any }) {
       {/* TEXT COMPONENT */}
       <div
         className="h-full flex flex-col justify-center box-border w-[50%] items-start p-[35px] px-[70px]
+        desktop_sm:px-[50px]
+        laptop:px-[35px]
         tablet:w-full tablet:items-center tablet:px-[35px]
       "
       >
         {/* Subtitle */}
         <div className="flex gap-2 justify-center items-center mb-2">
           <Image src={MiniLogoSvg} width="20" height="32" alt="logo" />
-          <p className="text-[20px]">Perfect oricând</p>
+          <p
+            className="text-[20px]
+          laptop:-[18px]
+          "
+          >
+            Perfect oricând
+          </p>
         </div>
 
         {/* Title */}
         <h2
           className="font-[600] text-[38px]
-        tablet:text-center"
+        laptop:text-[32px]
+        tablet:text-center
+        "
         >
           {blockData.title}
         </h2>

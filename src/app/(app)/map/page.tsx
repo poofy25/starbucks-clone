@@ -30,7 +30,7 @@ export default async function Page() {
     <main className="w-full flex flex-col justify-center items-center bg-[#F4EDDC]">
       <div
         className="site-container py-[70px]
-      tablet:py-[35px]
+      laptop:py-[35px]
       "
       >
         <h2 className=" flex gap-2 items-center justify-center font-bold text-[38px] ">

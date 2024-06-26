@@ -8,15 +8,14 @@ import MiniLogoSvg from '/public/svgs/miniLogo.svg'
 export default function PartnersSection({ blockData }: { blockData: any }) {
   return (
     <div
-      className="flex w-full gap-[30px] items-stretch
-       flex-row
-    "
+      className="flex w-full gap-[30px] items-stretch flex-row
+      tablet:flex-col"
     >
       {/* PARTNER BLOCKS */}
       {blockData.partners.map((partner: any, index: number) => {
         return (
           <div
-            className="flex flex-1 flex-col  rounded-[30px] overflow-hidden
+            className="flex flex-1 flex-col rounded-[30px] overflow-hidden
             "
             key={index}
           >
@@ -46,7 +45,7 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
                   {partner.title}
                 </h3>
 
-                <p className="font-[400] text-center my-4 m-0 text-[18px]">{partner.description}</p>
+                <p className="font-[400] text-center m-0 text-[18px]">{partner.description}</p>
 
                 {/* CTA Button */}
                 <Link

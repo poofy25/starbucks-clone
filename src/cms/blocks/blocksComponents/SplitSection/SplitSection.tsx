@@ -8,13 +8,15 @@ export default function SplitSection({ blockData }: { blockData: any }) {
     <section
       style={{ backgroundColor: blockData.backgroundColor }}
       className={`flex w-full justify-center items-center bg-white rounded-[30px]  overflow-hidden
-      aspect-[2.5/1] flex-row h-[566px]
-      ${blockData.invertPosition ? 'laptop:flex-row-reverse' : 'laptop:flex-row'}`}
+      aspect-[2.5/1] flex-row 
+      ${blockData.invertPosition ? 'flex-row-reverse' : 'flex-row'}
+      tablet:flex-col-reverse tablet:aspect-[unset]
+      `}
     >
       {/* TEXT COMPONENT */}
       <div
-        className="h-full flex flex-col justify-center   box-border
-      px-[2.5vw] w-[50%] items-start p-[70px]
+        className="h-full flex flex-col justify-center box-border w-[50%] items-start p-[35px]
+        tablet:w-full tablet:items-center
       "
       >
         {/* Subtitle */}
@@ -24,12 +26,17 @@ export default function SplitSection({ blockData }: { blockData: any }) {
         </div>
 
         {/* Title */}
-        <h2 className="text-center font-[600] text-[38px]">{blockData.title}</h2>
+        <h2
+          className="font-[600] text-[38px]
+        tablet:text-center"
+        >
+          {blockData.title}
+        </h2>
 
         {/* Paragraph */}
         <p
-          className="text-[17px] my-6 text-center
-        laptop:my-4 laptop:text-start desktop:my-8"
+          className="text-[17px] my-6
+        tablet:text-center"
         >
           {blockData.description}
         </p>
@@ -37,8 +44,7 @@ export default function SplitSection({ blockData }: { blockData: any }) {
         {/* CTA Button */}
         <Link
           className="ctaBtn text-md font-[500] rounded-full  bg-brand_red text-white flex justify-center items-center
-          hover:bg-transparent hover:text-brand_red transition-all border border-solid border-brand_red
-          "
+          hover:bg-transparent hover:text-brand_red transition-all border border-solid border-brand_red"
           href="#"
         >
           {blockData.buttonText}
@@ -47,7 +53,9 @@ export default function SplitSection({ blockData }: { blockData: any }) {
 
       {/* IMAGE COMPONENT */}
       <Image
-        className="h-full w-[50%] object-cover"
+        className="h-full w-[50%] object-cover
+        tablet:w-full
+        "
         src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${blockData.image.url}`}
         alt="img"
         width="400"

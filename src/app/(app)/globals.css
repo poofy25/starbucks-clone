@@ -33,8 +33,14 @@ body {
     margin-right: auto;
     margin-left: auto;
 
-    @apply desktop:max-w-[1440px] desktop_sm:max-w-[1300px] laptop_xl:max-w-[1200px]
+    @apply desktop:max-w-[1300px]
 }
+
+.site-container {
+    @apply desktop_sm:max-w-[1200px]
+}
+
+
 
 figure {
     @apply w-full h-[500px]

@@ -23,9 +23,11 @@ export default function MapSection({blockData}) {
 
             <LocationBlocks locations={locations}/>
 
-            <div className='relative w-full h-[600px]'>
+            <div className='relative w-full h-[600px]
+            laptop:h-[500px]
+            '>
               <Map
-              style={{width: '100%', height: '600px'}}
+              style={{width: '100%', height: '100%'}}
               defaultCenter={{lat: 47.02518789880545, lng: 28.83476631234761}}
               defaultZoom={11}
               gestureHandlig={'greedy'}
@@ -145,7 +147,8 @@ const LocationBlocks = ({locations}) => {
       const isSelected = currentLocation === index
       return (
         <div className={`${isSelected ? 'border-brand_red' : "border-white"}
-        border-2 border-solid bg-white rounded-[30px] gap-1 cursor-pointer flex-1 p-8 flex items-start justify-start flex-col
+        border-2 border-solid bg-white rounded-[30px] gap-1 cursor-pointer flex-1 p-[30px] flex items-start justify-start flex-col
+        laptop:p-[25px]
         tablet:min-w-[350px]
         `}
 

@@ -23,7 +23,7 @@ export default async function Footer() {
 
         {/* SECTIONS */}
         <div className="flex flex-wrap w-full justify-start py-[70px] gap-[30px] flex-row
-        tablet:py-[35px] 
+        laptop:py-[35px] 
         "
         >
 
@@ -33,7 +33,16 @@ export default async function Footer() {
           mobile:min-w-[100%] mobile:items-center
           '
           >
-            <Link href='/'><Image className='object-scale-down h-[75px] w-auto' src={data.image.url} width='130' height='100' alt='logo'/></Link>
+            <Link href='/'>
+              <Image className='object-scale-down h-[75px] w-auto
+              laptop:h-[65px]
+              ' 
+              src={data.image.url}
+              width='130'
+              height='100'
+              alt='logo'
+              />
+              </Link>
             <p className='font-[400]'>{data.info}</p>
           </div>
 

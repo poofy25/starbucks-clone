@@ -17,7 +17,10 @@ export default function ImageSwipper ({blockData}) {
     return (
         <div className='overflow-hidden'>
 
-            <section className='site-container box-border aspect-[2.8/1] py-[30px] '>
+            <section className='site-container box-border aspect-[2.8/1] py-[30px]
+             tablet:py-[15px]
+            '
+            >
                     <Swiper
                     modules={[Navigation]}
                     spaceBetween={30}

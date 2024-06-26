@@ -27,30 +27,32 @@ export default async function Navbar() {
 
         {/* PROMOTIONAL TEXT */}
         {promoText && 
-            <div className='text-white w-full font-[500] bg-brand_red flex justify-center items-center text-[13px] py-1 px-[15px] text-center h-[35px]'>
+            <div className='text-white w-full font-[500] bg-brand_red flex justify-center items-center text-[13px] px-[15px] text-center h-[35px]
+            mobile:text-[11px] mobile:h-[30px]
+            '>
               {promoText}
             </div>
         }
 
        <div className='site-container w-full'>
-        <nav className="flex flex-col z-20 bg-black text-black items-center w-full justify-evenly h-[68px] sticky top-0 shadow-md py-[10px] box-border">
-
-          
-
-
+        <nav className="flex flex-col z-20 bg-black text-black items-center w-full justify-evenly h-[68px] sticky top-0 shadow-md py-[10px] box-border
+        tablet:h-[60px]
+        mobile:h-[55px]
+        "
+        >
 
           <div className='flex justify-between w-full items-center h-full '>
             {/* Links */}
             <div className="flex-1 items-center text-white gap-6 font-bold flex">
               {links.map((link, index) => {
                 return (
-                  <Link className='text-[14px] font-[500]' href={link.href} key={index}>{link.text}</Link>
+                  <Link className='text-[14px] font-[500] mobile:text-[12px]' href={link.href} key={index}>{link.text}</Link>
                 )
               })}
             </div>
             {/* Logo */}
             <Link href='/' className="w-fit h-fit flex justify-center items-center">
-              <Image className='w-fit h-[27px]' src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${logo.url}`} alt='logo' width='160' height='32' priority />
+              <Image className='w-fit h-[27px] tablet:h-[24px] mobile:h-[20px]' src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${logo.url}`} alt='logo' width='160' height='32' priority />
             </Link>
 
             {/* Navbar menu and button */}
@@ -60,7 +62,9 @@ export default async function Navbar() {
 
               {/* Button 1 */}
               <Link
-                className="flex gap-1 text-[14px] items-center justify-center font-medium"
+                className="flex gap-1 text-[14px] items-center justify-center font-medium
+                mobile:text-[12px]
+                "
                 href={button1.href}
               > 
                 <Image className='max-w-[20px]' src={LocationSvg} alt='location' width='32' height='32'/>

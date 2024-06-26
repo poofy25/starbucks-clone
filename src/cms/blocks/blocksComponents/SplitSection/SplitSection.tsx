@@ -19,6 +19,7 @@ export default function SplitSection({ blockData }: { blockData: any }) {
         desktop_sm:px-[50px]
         laptop:px-[35px]
         tablet:w-full tablet:items-center tablet:px-[35px]
+        mobile:p-[20px]
       "
       >
         {/* Subtitle */}
@@ -38,6 +39,7 @@ export default function SplitSection({ blockData }: { blockData: any }) {
           className="font-[600] text-[38px]
         laptop:text-[32px]
         tablet:text-center
+        mobile:text-[26px]
         "
         >
           {blockData.title}
@@ -65,6 +67,7 @@ export default function SplitSection({ blockData }: { blockData: any }) {
       <Image
         className="h-full w-[50%] object-cover
         tablet:w-full
+        mobile:h-[250px]
         "
         src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${blockData.image.url}`}
         alt="img"

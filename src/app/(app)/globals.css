@@ -19,6 +19,7 @@ body {
     -webkit-font-smoothing: antialiased;
     line-height: 1.7;
     font-size: 17px;
+    @apply mobile:text-[16px]
 }
 
 .swiper-slide{
@@ -43,7 +44,7 @@ body {
 
 
 figure {
-    @apply w-full h-[500px]
+    @apply w-full h-[500px] tablet:h-[400px] mobile:h-[300px]
 }
 
 figure img {

@@ -20,6 +20,7 @@ export default async function HomePageContent({ pageData }: { pageData: any }) {
           gap-[70px] py-[70px]
           laptop:py-[35px] laptop:gap-[35px]
           tablet:gap-[35px]
+          mobile:py-[15px] mobile:gap-[15px]
           "
         >
           {pageData.blocks.map((block: any, index: number) => {

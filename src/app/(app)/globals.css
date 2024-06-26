@@ -10,6 +10,7 @@ html, body, #root {
     background-color: white;
     overflow-y: auto;
     scroll-behavior: smooth;
+
     @apply font-generalSans
 }
 
@@ -17,6 +18,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     line-height: 1.7;
+    font-size: 17px;
 }
 
 .swiper-slide{

@@ -73,7 +73,7 @@ const MarkerWithInfoWindow = ({position}) => {
   const handleMarkerClick = (ev) => {
       setInfoWindowShown(isShown => !isShown)
       map.panTo(ev.latLng);
-      map.setZoom(15)
+      map.setZoom(17)
     }
     
 
@@ -108,7 +108,7 @@ const LocationBlocks = ({locations}) => {
 
   const handleClick = (position, index) => {
     map.panTo(position);
-    map.setZoom(15)
+    map.setZoom(17)
     setCurrentLocation(index)
   }
 
@@ -121,7 +121,7 @@ const LocationBlocks = ({locations}) => {
 
     if (map){
       map.panTo(defaultPosition);
-      map.setZoom(15)
+      map.setZoom(17)
     }
     
     console.log(defaultPosition)

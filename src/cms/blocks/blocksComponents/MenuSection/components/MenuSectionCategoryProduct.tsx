@@ -7,7 +7,7 @@ export default function MenuSectionCategoryProduct({ productData }: { productDat
   return (
     <div className="flex flex-col flex-[1_1_calc(33.33%-35px)]  bg-white max-w-[450px] rounded-[30px] overflow-hidden">
       {/* IMAGE */}
-      <div className="w-full aspect-[3/2] relative rounded-[30px] overflow-hidden">
+      <div className="w-full aspect-[3/2] relative">
         {productData.image.url && (
           <Image
             src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${productData.image.url}`}
@@ -24,12 +24,12 @@ export default function MenuSectionCategoryProduct({ productData }: { productDat
         /> */}
       </div>
       {/* TEXT DATA */}
-      <div className="flex flex-col flex-1 gap-[30px] p-[30px] w-full">
+      <div className="flex flex-col flex-1 gap-[20px] p-[30px] w-full">
         {/* HEADER */}
         <div className="flex justify-between items-center w-full gap-[15px]">
-          <div className="flex justify-center items-center gap-[15px]">
+          <div className="flex justify-center items-center gap-2">
             <Image src={MiniLogoSvg} width="20" height="32" alt="logo" />
-            <h4 className="text-[24px] font-bold">{productData.name}</h4>
+            <h4 className="text-[22px] font-[600]">{productData.name}</h4>
           </div>
           {productData.weight && <p className="min-w-[40px] opacity-70">{productData.weight}</p>}
         </div>

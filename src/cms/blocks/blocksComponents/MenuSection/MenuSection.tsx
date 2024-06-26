@@ -6,7 +6,7 @@ export default function MenuSection({ menuData }: { menuData: any }) {
   return (
     <section className="w-full">
       <MenuSectionNavigation menuCategories={menuData.categories} />
-      <div className="flex flex-col gap-[100px] py-[50px]">
+      <div className="flex flex-col gap-[50px] py-[70px]">
         {menuData.categories.map((category: any, index: number) => (
           <MenuSectionCategorySection category={category} key={index} />
         ))}

@@ -28,7 +28,7 @@ export default async function Page() {
 
   return (
     <main className="w-full flex flex-col justify-center items-center bg-[#F4EDDC]">
-      <h2 className="flex gap-2 items-center justify-center font-bold text-[32px] my-[70px]">
+      <h2 className="flex gap-2 items-center justify-center font-bold text-[38px] my-[70px]">
         <Image
           alt="miniLogo"
           src={MiniLogoSvg}

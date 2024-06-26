@@ -26,7 +26,7 @@ export default function SplitSection({ blockData }: { blockData: any }) {
           <Image src={MiniLogoSvg} width="20" height="32" alt="logo" />
           <p
             className="text-[20px]
-          laptop:-[18px]
+          laptop:[18px]
           "
           >
             Perfect oricând

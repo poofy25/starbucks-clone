@@ -16,8 +16,8 @@ export default async function HomePageContent({ pageData }: { pageData: any }) {
       {/* SPLIT & PARTNERS SECTIONS */}
       <div className="bg-[#F4EDDC]">
         <section
-          className="site-container flex flex-col items-center justify-center px-[15px] gap-[48px] py-[32px] box-border
-          laptop:gap-[70px] laptop:py-[70px]"
+          className="site-container flex flex-col items-center justify-center px-[15px] box-border
+          gap-[70px] py-[70px]"
         >
           {pageData.blocks.map((block: any, index: number) => {
             if (block.blockType === 'splitSection') {

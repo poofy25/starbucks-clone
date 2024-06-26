@@ -39,9 +39,9 @@ export default async function Navbar() {
 
 
 
-          <div className='flex justify-between w-full items-center h-full laptop:w-[70vw] laptop:min-w-[864px] desktop:w-[1410px]'>
+          <div className='flex justify-between w-full items-center h-full '>
             {/* Links */}
-            <div className="flex-1 items-center text-white gap-6 font-bold hidden laptop:flex">
+            <div className="flex-1 items-center text-white gap-6 font-bold flex">
               {links.map((link, index) => {
                 return (
                   <Link className='text-[14px] font-[500]' href={link.href} key={index}>{link.text}</Link>
@@ -56,7 +56,7 @@ export default async function Navbar() {
             {/* Navbar menu and button */}
             {/* <NavBarMenu/> */}
 
-            <div className="gap-[20px] items-center justify-end flex-1 text-white hidden laptop:flex">
+            <div className="gap-[20px] items-center justify-end flex-1 text-white flex">
 
               {/* Button 1 */}
               <Link

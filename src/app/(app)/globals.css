@@ -32,12 +32,12 @@ body {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+
+    @apply desktop_sm:max-w-[1300px] laptop_xl:max-w-[1200px]
 }
 
 figure {
-    height: 200px;
-    width: 100%;
-    @apply tablet:h-fit desktop:h-[500px]
+    @apply w-full h-[500px]
 }
 
 figure img {

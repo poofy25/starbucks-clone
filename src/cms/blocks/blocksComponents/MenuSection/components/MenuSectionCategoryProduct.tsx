@@ -24,14 +24,16 @@ export default function MenuSectionCategoryProduct({ productData }: { productDat
         /> */}
       </div>
       {/* TEXT DATA */}
-      <div className="flex flex-col flex-1 gap-[20px] p-[30px] w-full">
+      <div className="flex flex-col flex-1 gap-[20px] p-[25px] w-full">
         {/* HEADER */}
         <div className="flex justify-between items-center w-full gap-[15px]">
           <div className="flex justify-center items-center gap-2">
             <Image src={MiniLogoSvg} width="20" height="32" alt="logo" />
             <h4 className="text-[22px] font-[600]">{productData.name}</h4>
           </div>
-          {productData.weight && <p className="min-w-[40px] opacity-70">{productData.weight}</p>}
+          {productData.weight && (
+            <p className="min-w-[40px] font-[500] text-[#999]">{productData.weight}</p>
+          )}
         </div>
         <p>{productData.description}</p>
         <p className="text-[20px] text-brand_red font-bold mt-auto">{productData.price} lei</p>

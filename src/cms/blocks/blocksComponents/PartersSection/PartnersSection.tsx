@@ -8,8 +8,8 @@ import MiniLogoSvg from '/public/svgs/miniLogo.svg'
 export default function PartnersSection({ blockData }: { blockData: any }) {
   return (
     <div
-      className="flex flex-col w-full gap-[30px] items-stretch
-       laptop:flex-row
+      className="flex w-full gap-[30px] items-stretch
+       flex-row
     "
     >
       {/* PARTNER BLOCKS */}
@@ -21,7 +21,7 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
             key={index}
           >
             {/* PARTNER IMAGE */}
-            <div className="relative w-full aspect-[2/1] desktop:aspect-[uset]">
+            <div className="relative w-full aspect-[2/1]">
               <Image
                 className="object-cover"
                 alt="partner image"
@@ -37,8 +37,8 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
               gap-[25px]"
               >
                 <h3
-                  className="font-bold text-center text-[28px] flex flex-col justify-center items-center gap-2
-                laptop:text-[28px] laptop:text-start laptop:flex-row desktop:text-[32px]
+                  className="font-bold flex justify-center items-center gap-2
+                   text-start flex-row text-[32px]
                 "
                 >
                   <Image src={MiniLogoSvg} width="20" height="32" alt="logo" />
@@ -46,9 +46,7 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
                   {partner.title}
                 </h3>
 
-                <p className="font-[400] text-center my-4 laptop:text-[16px] desktop:m-0 desktop:text-[18px]">
-                  {partner.description}
-                </p>
+                <p className="font-[400] text-center my-4 m-0 text-[18px]">{partner.description}</p>
 
                 {/* CTA Button */}
                 <Link

@@ -10,26 +10,30 @@ import GlovoIconSvg from '/public/svgs/glovoDelivery.svg'
 import StrausIconSvg from '/public/svgs/strausDelivery.svg'
 
 
+//Map section component
+
 export default function MapSection({blockData}) {
+
   const locations = blockData.locations
-
-
 
   return (
     <section className='w-full h-full flex flex-col justify-center items-center relative'>
         <APIProvider apiKey={process.env.NEXT_PUBLIC_MAP_API_KEY}>
+
+
             <LocationBlocks locations={locations}/>
+
             <div className='relative w-full h-[700px]'>
-            <Map
-            style={{width: '100%', height: '700px'}}
-            defaultCenter={{lat: 47.02518789880545, lng: 28.83476631234761}}
-            defaultZoom={11}
-            gestureHandlig={'greedy'}
-            disableDefaultUI={true}
-            mapId='MAP_ID'
-            >
-              <PoiMarkers pois={locations} />
-            </Map>
+              <Map
+              style={{width: '100%', height: '700px'}}
+              defaultCenter={{lat: 47.02518789880545, lng: 28.83476631234761}}
+              defaultZoom={11}
+              gestureHandlig={'greedy'}
+              disableDefaultUI={true}
+              mapId='MAP_ID'
+              >
+                <PoiMarkers pois={locations} />
+              </Map>
             </div>
             
         </APIProvider>
@@ -37,6 +41,7 @@ export default function MapSection({blockData}) {
   )
 }
 
+// Map markers
 const PoiMarkers = (props) => {
   
 
@@ -56,6 +61,7 @@ const PoiMarkers = (props) => {
   );
 };
 
+// Marker info window
 const MarkerWithInfoWindow = ({position}) => {
 
   const [markerRef, marker] = useAdvancedMarkerRef();
@@ -93,6 +99,7 @@ const MarkerWithInfoWindow = ({position}) => {
   );
 };
 
+// Location blocks
 const LocationBlocks = ({locations}) => {
   const map = useMap()
   console.log('map:' , map)

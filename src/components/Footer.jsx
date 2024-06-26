@@ -5,9 +5,10 @@ import { getPayloadHMR } from "@payloadcms/next/utilities";
 import configPromise from '@payload-config'
 
 import PatternLineImg from '/public/imgs/pattern_line.jpg'
+
 import InstagramSvg from '/public/svgs/instagram.svg'
 import FacebookSvg from '/public/svgs/facebook.svg'
-import EmailSvg from '/public/svgs/email.svg'
+import TiktokSvg from '/public/svgs/tiktok.svg'
 
 export default async function Footer() {
 
@@ -24,7 +25,7 @@ export default async function Footer() {
       <Image alt='pattern' className='h-[35px] w-full object-cover' src={PatternLineImg} width='1920' height='35'/>
       <div className='site-container'>
 
-        {/* LINKS / SECTIONS */}
+        {/* SECTIONS */}
         <div className="flex flex-wrap w-full  py-[48px] justify-start
         laptop:py-[70px] laptop:gap-32 laptop:flex-row 
         ">
@@ -32,20 +33,20 @@ export default async function Footer() {
           {/* LOGO */}
           <div className='flex flex-col items-center gap-8 w-full mb-16 laptop:mb-0 laptop:items-start laptop:w-[164px]'>
             <Link href='/'><Image className='object-scale-down h-[75px] w-auto' src={data.image.url} width='130' height='100' alt='logo'/></Link>
-            <p className='font-[500]'>{data.info}</p>
+            <p className='font-[400]'>{data.info}</p>
           </div>
 
           {/* Maping through sections */}
           {data.linksSections.map((section, index) => {
 
             return (
-              <div className="flex flex-[0_0_50%] max-w-[50%] items-center flex-col gap-4 text-[18px] laptop:flex-1 laptop:items-start" key={index}>
+              <div className="flex flex-[0_0_50%] max-w-[50%] items-center flex-col gap-[10px] text-[18px] laptop:flex-1 laptop:items-start" key={index}>
                 <h3 className="text-[20px] font-[500] text-brand_red">{section.title}</h3>
 
-                {/* Mapping through section links */}
+                {/* LINKS */}
                 {section.links.map((link, index) => {
                   return (
-                    <Link className="opacity-75 text-base hover:opacity-100" href={link.href} key={index}>{link.text}</Link>
+                    <Link className="opacity-50 text-base hover:opacity-100" href={link.href} key={index}>{link.text}</Link>
                   )
                 })}
             
@@ -55,15 +56,15 @@ export default async function Footer() {
 
           {/* Contact section */}
 
-          <div className="flex w-full flex-col gap-4 text-[18px] items-center mt-16 laptop:mt-0 laptop:flex-1 laptop:items-start">
+          <div className="flex w-full flex-col gap-[10px] text-[18px] items-center mt-16 laptop:mt-0 laptop:flex-1 laptop:items-start">
                 <h3 className="text-[20px] font-[500] text-brand_red">{data.contact.title}</h3>
 
-                {/* Mapping through section links */}
+                {/* LINKS */}
                 {data.contact.links.map((link, index) => {
                   return (
                     <div className='flex flex-col items-center gap-2 laptop:items-start' key={index}>
-                      <p className='text-center laptop:text-start'>{link.title}</p>
-                      <Link className="opacity-75 text-base hover:opacity-100" href={link.href} key={index}>{link.text}</Link>
+                      <p className='text-center text-[16px] laptop:text-start'>{link.title}</p>
+                      <Link className="opacity-50 text-base hover:opacity-100" href={link.href} key={index}>{link.text}</Link>
                     </div>
                   )
                 })}
@@ -78,15 +79,22 @@ export default async function Footer() {
 
           <div className='site-container'>
             <div className="flex flex-col-reverse gap-4 justify-between items-center py-4 mt-4 box-border
-            laptop:mt-0 laptop:py-[20px] laptop:flex-row laptop:gap-0   
+            laptop:mt-0 laptop:py-[15px] laptop:flex-row laptop:gap-0   
             ">
-              <p className="text-[16px] opacity-75">
+              <p className="text-[14px] opacity-50">
                 {data.bottomFooter.copyrightText}
               </p>
               <div className='flex gap-[30px]'>
-                <Link href={data.bottomFooter.instagramHref}><Image src={InstagramSvg} alt='social' height='36' width='36'/></Link>
-                <Link href={data.bottomFooter.facebookHref}><Image src={FacebookSvg} alt='social' height='36' width='36'/></Link>
-                <Link href={data.bottomFooter.emailHref}><Image src={EmailSvg} alt='social' height='36' width='36'/></Link>
+                <Link className='p-2 border border-solid border-white rounded-full opacity-50' href={data.bottomFooter.instagramHref}>
+                <svg className='w-[20px] h-[20px]' fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 170"><path d="M122.406 0H46.654C20.929 0 0 20.93 0 46.655v75.752c0 25.726 20.929 46.655 46.654 46.655h75.752c25.727 0 46.656-20.93 46.656-46.655V46.655C169.063 20.93 148.133 0 122.406 0Zm31.657 122.407c0 17.455-14.201 31.655-31.656 31.655H46.654C29.2 154.063 15 139.862 15 122.407V46.655C15 29.201 29.2 15 46.654 15h75.752c17.455 0 31.656 14.201 31.656 31.655v75.752h.001Z" fill="#fff"/><path d="M84.53 40.97c-24.02 0-43.562 19.542-43.562 43.563 0 24.02 19.542 43.561 43.563 43.561s43.563-19.541 43.563-43.561c0-24.021-19.542-43.563-43.563-43.563Zm0 72.123c-15.748 0-28.562-12.812-28.562-28.561 0-15.75 12.813-28.563 28.563-28.563 15.75 0 28.563 12.813 28.563 28.563 0 15.749-12.814 28.561-28.563 28.561Zm45.391-84.842c-2.89 0-5.729 1.17-7.77 3.22a11.053 11.053 0 0 0-3.23 7.78c0 2.891 1.18 5.73 3.23 7.78 2.04 2.04 4.88 3.22 7.77 3.22 2.9 0 5.73-1.18 7.78-3.22 2.05-2.05 3.22-4.89 3.22-7.78 0-2.9-1.17-5.74-3.22-7.78-2.04-2.05-4.88-3.22-7.78-3.22Z" fill="#fff"/></svg>
+
+                </Link>
+                <Link className='p-2 border border-solid border-white rounded-full opacity-50' href={data.bottomFooter.facebookHref}>
+                <svg className='w-[20px] h-[20px]'  fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 156"><path d="M52.584 155.139V84.378h23.742l3.562-27.585H52.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C78.325.752 69.661 0 59.577 0 38.52 0 24.104 12.853 24.104 36.452v20.341H.29v27.585h23.814v70.761h28.48Z" fill="#ffffff"/></svg>
+                </Link>
+                <Link className='p-2 border border-solid border-white rounded-full opacity-50' href={data.bottomFooter.tiktokHref}>
+                  <svg className='w-[20px] h-[20px]' fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 96"><path d="M67.66 18.573C63.442 13.669 61.232 7.332 61.407.88L45.643.5v67.466c-4.244 18.913-31.616 13.978-28.876-5.265 1.529-8.79 10.972-14.198 19.365-11.141V35.476C17.861 32.295.546 46.837.728 65.364c1.597 40.179 59.226 40.185 60.825 0-.403-1.438-.178-28.214-.235-30.472a42.634 42.634 0 0 0 23.954 6.405V24.685c-7.808 0-13.767-2.076-17.612-6.112Z" fill="#fff"/></svg>
+                </Link>
               </div>
             </div>
           </div>

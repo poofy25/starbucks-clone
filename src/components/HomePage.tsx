@@ -6,18 +6,18 @@ import PartnersSection from '@/cms/blocks/blocksComponents/PartersSection/Partne
 export default async function HomePageContent({ pageData }: { pageData: any }) {
   return (
     <main className="flex flex-col">
+      {/* SWIPPER */}
       {pageData.blocks.map((block: any, index: number) => {
         if (block.blockType === 'imageSwipper') {
           return <ImageSwipper blockData={block} key={index} />
         }
       })}
-      <div
-        className=" bg-[#F4EDDC]
-      "
-      >
+
+      {/* SPLIT & PARTNERS SECTIONS */}
+      <div className="bg-[#F4EDDC]">
         <section
           className="site-container flex flex-col items-center justify-center px-[15px] gap-[48px] py-[32px] box-border
-      laptop:gap-[70px] laptop:py-[70px]"
+          laptop:gap-[70px] laptop:py-[70px]"
         >
           {pageData.blocks.map((block: any, index: number) => {
             if (block.blockType === 'splitSection') {

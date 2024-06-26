@@ -12,7 +12,7 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
        laptop:flex-row
     "
     >
-      {/* MAPPING THROUGH PARTNER BLOCKS */}
+      {/* PARTNER BLOCKS */}
       {blockData.partners.map((partner: any, index: number) => {
         return (
           <div
@@ -50,7 +50,7 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
                   {partner.description}
                 </p>
 
-                {/* Button */}
+                {/* CTA Button */}
                 <Link
                   className="ctaBtn text-sm font-[500] rounded-full bg-brand_red text-white flex justify-center items-center
                   hover:bg-transparent hover:text-brand_red transition-all border border-solid border-brand_red

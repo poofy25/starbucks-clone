@@ -114,9 +114,9 @@ const Footer: GlobalConfig = {
           required: true,
         },
         {
-          name: 'emailHref',
+          name: 'tiktokHref',
           type: 'text',
-          label: 'Email Href',
+          label: 'TikTok Href',
           required: true,
         },
       ],

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {APIProvider, Map , AdvancedMarker, useMap, useAdvancedMarkerRef, InfoWindow} from '@vis.gl/react-google-maps';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 
 import GlovoIconSvg from '/public/svgs/glovoDelivery.svg'
 import StrausIconSvg from '/public/svgs/strausDelivery.svg'
@@ -23,9 +23,9 @@ export default function MapSection({blockData}) {
 
             <LocationBlocks locations={locations}/>
 
-            <div className='relative w-full h-[700px]'>
+            <div className='relative w-full h-[600px]'>
               <Map
-              style={{width: '100%', height: '700px'}}
+              style={{width: '100%', height: '600px'}}
               defaultCenter={{lat: 47.02518789880545, lng: 28.83476631234761}}
               defaultZoom={11}
               gestureHandlig={'greedy'}
@@ -104,13 +104,28 @@ const LocationBlocks = ({locations}) => {
   const map = useMap()
   console.log('map:' , map)
 
-  const [currentLocation, setCurrentLocation] = useState(null)
+  const [currentLocation, setCurrentLocation] = useState(0)
 
   const handleClick = (position, index) => {
     map.panTo(position);
     map.setZoom(15)
     setCurrentLocation(index)
   }
+
+  useEffect(()=>{
+
+    const defaultPosition = {
+      lat:locations[0].location[0],
+      lng:locations[0].location[1],
+    }
+
+    if (map){
+      map.panTo(defaultPosition);
+      map.setZoom(15)
+    }
+    
+    console.log(defaultPosition)
+  },[map, locations])
 
 
   return (
@@ -130,13 +145,13 @@ const LocationBlocks = ({locations}) => {
         key={index} onClick={()=>handleClick(position, index)}>
           <h4 className='text-[22px] font-bold mb-1'>{location.city}</h4>
           <p>{location.adress}</p>
-          <p>Livrare și precomandă</p>
-          <p>{location.phone}</p>
-          <p>{location.email}</p>
-          <p>{location.workingHours}</p>
+          <h5 className='mt-[10px] font-[500]'>Livrare și precomandă</h5>
+          <Link className='opacity-50' href={location.phoneHref}>{location.phone}</Link>
+          <Link className='opacity-50' href={location.emailHref}>{location.email}</Link>
+          <h5 className='mt-[10px] font-[500]'>{location.workingHours}</h5>
           <div className='flex gap-4 mt-3'>
-            <Link href='/#' className='cursor-pointer'><Image src={GlovoIconSvg} alt='deliveryLogo' width='40' height='40'/></Link>
-            <Link href='/#' className='cursor-pointer'><Image src={StrausIconSvg} alt='deliveryLogo' width='40' height='40'/></Link>
+            <Link href='/#' className='cursor-pointer'><Image src={GlovoIconSvg} alt='deliveryLogo' width='35' height='35'/></Link>
+            <Link href='/#' className='cursor-pointer'><Image src={StrausIconSvg} alt='deliveryLogo' width='35' height='35'/></Link>
           </div>
         </div>
       )

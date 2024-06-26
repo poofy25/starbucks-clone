@@ -29,8 +29,20 @@ const MapSection: Block = {
           required: true,
         },
         {
+          name: 'phoneHref',
+          label: 'Phone Href',
+          type: 'text',
+          required: true,
+        },
+        {
           name: 'email',
           label: 'Email',
+          type: 'text',
+          required: true,
+        },
+        {
+          name: 'emailHref',
+          label: 'Email Href',
           type: 'text',
           required: true,
         },

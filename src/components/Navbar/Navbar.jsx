@@ -54,7 +54,7 @@ export default async function Navbar() {
             </Link>
 
             {/* Navbar menu and button */}
-            <NavBarMenu/>
+            {/* <NavBarMenu/> */}
 
             <div className="gap-[20px] items-center justify-end flex-1 text-white hidden laptop:flex">
 

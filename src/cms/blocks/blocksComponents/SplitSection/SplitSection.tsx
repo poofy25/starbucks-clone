@@ -8,7 +8,7 @@ export default function SplitSection({ blockData }: { blockData: any }) {
     <section
       style={{ backgroundColor: blockData.backgroundColor }}
       className={`flex flex-col-reverse w-full justify-center items-center bg-white rounded-[30px]  overflow-hidden
-      laptop:aspect-[2.5/1] laptop:gap-[30px] laptop:flex-row desktop:h-[566px]
+      laptop:aspect-[2.5/1] laptop:flex-row desktop:h-[566px]
       ${blockData.invertPosition ? 'laptop:flex-row-reverse' : 'laptop:flex-row'}`}
     >
       {/* TEXT COMPONENT */}

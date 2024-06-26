@@ -36,6 +36,7 @@ export default async function Page() {
         <h2
           className=" flex gap-2 items-center justify-center font-bold text-[38px]
          laptop:text-[32px]
+         mobile:text-[26px]
          "
         >
           <Image

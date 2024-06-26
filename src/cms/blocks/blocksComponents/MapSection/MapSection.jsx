@@ -25,6 +25,7 @@ export default function MapSection({blockData}) {
 
             <div className='relative w-full h-[600px]
             laptop:h-[500px]
+            mobile:h-[400px]
             '>
               <Map
               style={{width: '100%', height: '100%'}}
@@ -150,6 +151,7 @@ const LocationBlocks = ({locations}) => {
         border-2 border-solid bg-white rounded-[30px] gap-1 cursor-pointer flex-1 p-[30px] flex items-start justify-start flex-col
         laptop:p-[25px]
         tablet:min-w-[350px]
+        mobile:min-w-[300px]
         `}
 
         key={index}

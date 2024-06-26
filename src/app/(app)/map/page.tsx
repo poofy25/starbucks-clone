@@ -28,16 +28,23 @@ export default async function Page() {
 
   return (
     <main className="w-full flex flex-col justify-center items-center bg-[#F4EDDC]">
-      <h2 className="flex gap-2 items-center justify-center font-bold text-[38px] my-[70px]">
-        <Image
-          alt="miniLogo"
-          src={MiniLogoSvg}
-          width="20"
-          height="32"
-          className="object-scale-down"
-        />
-        Găsește-ne la adresele
-      </h2>
+      <div
+        className="site-container py-[70px]
+      tablet:py-[35px]
+      "
+      >
+        <h2 className=" flex gap-2 items-center justify-center font-bold text-[38px] ">
+          <Image
+            alt="miniLogo"
+            src={MiniLogoSvg}
+            width="20"
+            height="32"
+            className="object-scale-down"
+          />
+          Găsește-ne la adresele
+        </h2>
+      </div>
+
       {pageData.blocks.map((block: any, index: number) => {
         if (block.blockType === 'mapSection') {
           return <MapSection blockData={block} key={index} />

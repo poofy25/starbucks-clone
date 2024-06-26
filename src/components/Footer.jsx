@@ -22,7 +22,8 @@ export default async function Footer() {
       <div className='site-container'>
 
         {/* SECTIONS */}
-        <div className="flex flex-wrap w-full justify-start py-[35px] gap-[30px] flex-row 
+        <div className="flex flex-wrap w-full justify-start py-[70px] gap-[30px] flex-row
+        tablet:py-[35px] 
         "
         >
 

@@ -5,7 +5,12 @@ import MiniLogoSvg from '/public/svgs/miniLogo.svg'
 
 export default function MenuSectionCategoryProduct({ productData }: { productData: any }) {
   return (
-    <div className="flex flex-col flex-[0_0_calc(33.33%-20px)]  bg-white max-w-[450px] rounded-[30px] overflow-hidden">
+    <div
+      className="flex flex-col flex-[0_0_calc(33.33%-20px)]  bg-white max-w-[450px] rounded-[30px] overflow-hidden
+    tablet:flex-[0_0_calc(50%-15px)]
+    mobile:flex-[0_0_100%] mobile:max-w-[100%]
+    "
+    >
       {/* IMAGE */}
       <div className="w-full aspect-[3/2] relative">
         {productData.image.url && (

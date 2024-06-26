@@ -129,7 +129,10 @@ const LocationBlocks = ({locations}) => {
 
 
   return (
-    <div className='site-container flex gap-[30px] mb-[70px]'>
+    <div className='site-container flex gap-[30px] mb-[70px]
+    tablet:overflow-auto tablet:[35px]
+    '>
+
     {locations.map((location, index) => {
 
       const position = {
@@ -140,15 +143,21 @@ const LocationBlocks = ({locations}) => {
       const isSelected = currentLocation === index
       return (
         <div className={`${isSelected ? 'border-brand_red' : "border-white"}
-        border-2 border-solid 
-        bg-white rounded-[30px] gap-1 cursor-pointer flex-1 p-8 flex items-start justify-start flex-col`}
-        key={index} onClick={()=>handleClick(position, index)}>
+        border-2 border-solid bg-white rounded-[30px] gap-1 cursor-pointer flex-1 p-8 flex items-start justify-start flex-col
+        tablet:min-w-[350px]
+        `}
+
+        key={index}
+        onClick={()=>handleClick(position, index)}
+        >
+
           <h4 className='text-[22px] font-bold mb-1'>{location.city}</h4>
           <p>{location.adress}</p>
           <h5 className='mt-[10px] font-[500]'>Livrare și precomandă</h5>
           <Link className='opacity-50' href={location.phoneHref}>{location.phone}</Link>
           <Link className='opacity-50' href={location.emailHref}>{location.email}</Link>
           <h5 className='mt-[10px] font-[500]'>{location.workingHours}</h5>
+
           <div className='flex gap-4 mt-3'>
             <Link href='/#' className='cursor-pointer'><Image src={GlovoIconSvg} alt='deliveryLogo' width='35' height='35'/></Link>
             <Link href='/#' className='cursor-pointer'><Image src={StrausIconSvg} alt='deliveryLogo' width='35' height='35'/></Link>

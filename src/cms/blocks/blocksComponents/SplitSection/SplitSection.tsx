@@ -15,8 +15,8 @@ export default function SplitSection({ blockData }: { blockData: any }) {
     >
       {/* TEXT COMPONENT */}
       <div
-        className="h-full flex flex-col justify-center box-border w-[50%] items-start p-[35px]
-        tablet:w-full tablet:items-center
+        className="h-full flex flex-col justify-center box-border w-[50%] items-start p-[35px] px-[70px]
+        tablet:w-full tablet:items-center tablet:px-[35px]
       "
       >
         {/* Subtitle */}

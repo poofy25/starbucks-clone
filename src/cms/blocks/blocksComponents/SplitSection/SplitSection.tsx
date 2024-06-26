@@ -47,7 +47,7 @@ export default function SplitSection({ blockData }: { blockData: any }) {
 
         {/* Paragraph */}
         <p
-          className="text-[17px] my-6
+          className="my-6
         tablet:text-center"
         >
           {blockData.description}

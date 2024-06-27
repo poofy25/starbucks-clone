@@ -44,9 +44,9 @@ export default function PartnersSection({ blockData }: { blockData: any }) {
               "
               >
                 <h3
-                  className="font-[600] flex justify-center items-center gap-2
-                   text-start flex-row text-[32px]
+                  className="font-[600] flex justify-center items-center gap-2 text-start flex-row text-[32px]
                    laptop:text-[28px]
+                   mobile:text-[26px]
                 "
                 >
                   <Image src={MiniLogoSvg} width="20" height="32" alt="logo" />

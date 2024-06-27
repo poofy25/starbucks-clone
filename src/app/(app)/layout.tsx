@@ -1,14 +1,8 @@
 import React from 'react'
 import './globals.css'
-import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar/Navbar'
-
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-})
 
 const GeneralSans = localFont({
   src: [
@@ -41,6 +35,13 @@ const Switzer = localFont({
   ],
   variable: '--Switzer',
 })
+
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Mozza',
+  description: 'Mozza Description',
+}
 
 /* Our app sits here to not cause any conflicts with payload's root layout  */
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {

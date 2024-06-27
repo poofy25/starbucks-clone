@@ -11,6 +11,13 @@ import Image from 'next/image'
 
 import MiniLogoSvg from '/public/svgs/miniLogo.svg'
 
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Locatii - Mozza',
+  description: 'Mozza Description',
+}
+
 export default async function Page() {
   const payload = await getPayloadHMR({ config: configPromise })
 

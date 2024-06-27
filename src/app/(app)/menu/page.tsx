@@ -6,6 +6,13 @@ import { getPayloadHMR } from '@payloadcms/next/utilities'
 import configPromise from '@payload-config'
 import MenuSection from '@/cms/blocks/blocksComponents/MenuSection/MenuSection'
 
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Meniu - Mozza',
+  description: 'Mozza Description',
+}
+
 export default async function Page() {
   const payload = await getPayloadHMR({ config: configPromise })
 
